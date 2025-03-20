@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 20 20:34:36 2025
+# Process ID: 247956
+# Current directory: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/synth_1
+# Command line: vivado -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
+# Log file: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/synth_1/top_wrapper.vds
+# Journal file: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/synth_1/vivado.jou
+# Running On: DESKTOP-B66BQ5K, OS: Linux, CPU Frequency: 3494.400 MHz, CPU Physical cores: 10, Host memory: 16658 MB
+#-----------------------------------------------------------
+source top_wrapper.tcl -notrace

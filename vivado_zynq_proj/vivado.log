@@ -1,0 +1,384 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 20 20:19:17 2025
+# Process ID: 241900
+# Current directory: /home/lsh/2025/vivado_zynq_proj_scw60p79
+# Command line: vivado finn_zynq_link.xpr
+# Log file: /home/lsh/2025/vivado_zynq_proj_scw60p79/vivado.log
+# Journal file: /home/lsh/2025/vivado_zynq_proj_scw60p79/vivado.jou
+# Running On: DESKTOP-B66BQ5K, OS: Linux, CPU Frequency: 3494.400 MHz, CPU Physical cores: 10, Host memory: 16658 MB
+#-----------------------------------------------------------
+start_gui
+open_project finn_zynq_link.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/lsh/tools/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/Documents/VIVADO/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/FPGA/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'top_StreamingDataflowPartition_1_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_StreamingDataflowPartition_1_0/top_StreamingDataflowPartition_1_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_StreamingDataflowPartition_1_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_StreamingDataflowPartition_1_0/top_StreamingDataflowPartition_1_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_StreamingDataflowPartition_1_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_StreamingDataflowPartition_1_0/top_StreamingDataflowPartition_1_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_StreamingDataflowPartition_1_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_StreamingDataflowPartition_1_0/top_StreamingDataflowPartition_1_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_StreamingDataflowPartition_1_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_StreamingDataflowPartition_1_0/top_StreamingDataflowPartition_1_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_dma_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_dma_0_0/top_axi_dma_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_dma_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_dma_0_0/top_axi_dma_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_dma_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_dma_0_0/top_axi_dma_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_dma_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_dma_0_0/top_axi_dma_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_dma_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_dma_0_0/top_axi_dma_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_perf_mon_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_perf_mon_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_perf_mon_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_perf_mon_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_axi_perf_mon_0_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_xbar_2' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_xbar_2/top_xbar_2.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_xbar_2' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_xbar_2/top_xbar_2_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_xbar_2' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_xbar_2/top_xbar_2_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_xbar_2' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_xbar_2/top_xbar_2_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_xbar_2' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_xbar_2/top_xbar_2_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_auto_us_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_auto_us_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_auto_us_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_auto_us_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_auto_us_0' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_system_ila_0_1' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_system_ila_0_1' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_system_ila_0_1' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_system_ila_0_1' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'top_system_ila_0_1' generated file not found '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:11 . Memory (MB): peak = 8281.398 ; gain = 751.559 ; free physical = 7350 ; free virtual = 9823
+update_compile_order -fileset sources_1
+open_bd_design {/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd}
+Reading block design file </home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd>...
+Adding component instance block -- xilinx_finn:finn:StreamingDataflowPartition_1:1.0 - StreamingDataflowPartition_1
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_perf_mon:5.0 - axi_perf_mon_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:user:custom_fifo:1.0 - custom_fifo_0
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_1
+Adding component instance block -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Successfully read diagram <top> from block design file </home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd>
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { axi_dma_0_M_AXI_S2MM } ]
+endgroup
+make_wrapper -files [get_files /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd] -top
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+CRITICAL WARNING: [xilinx.com:ip:axi_dma:7.1-11] /axi_dma_0
+                   #################################### 
+                   S_AXIS_S2MM interface is unconnected
+                   ####################################
+Wrote  : </home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd> 
+Wrote  : </home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/ui/bd_2ae56375.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tdata'(32) to pin: '/axi_dma_0/m_axis_mm2s_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tkeep'(4) to pin: '/axi_dma_0/m_axis_mm2s_tkeep'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tdata'(32) to pin: '/axi_dma_0/m_axis_mm2s_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tkeep'(4) to pin: '/axi_dma_0/m_axis_mm2s_tkeep'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/sim/top.v
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hdl/top_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 8874.195 ; gain = 0.000 ; free physical = 11550 ; free virtual = 14807
+validate_bd_design -force
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+CRITICAL WARNING: [xilinx.com:ip:axi_dma:7.1-11] /axi_dma_0
+                   #################################### 
+                   S_AXIS_S2MM interface is unconnected
+                   ####################################
+set_property  ip_repo_paths  {/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip /home/lsh/Documents/VIVADO/ip_repo /home/lsh/Documents/VIVADO/20241206/ip_repo /tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip /home/lsh/FPGA/finn/finn-rtllib/memstream /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/Documents/VIVADO/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/Documents/VIVADO/20241206/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/FPGA/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:fifo_interface:1.0 fifo_interface_0
+endgroup
+set_property location {4 1381 -76} [get_bd_cells fifo_interface_0]
+delete_bd_objs [get_bd_intf_nets StreamingDataflowPartition_1_m_axis_0]
+connect_bd_intf_net [get_bd_intf_pins fifo_interface_0/s_axis] [get_bd_intf_pins StreamingDataflowPartition_1/m_axis_0]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_2_AXIS] [get_bd_intf_pins StreamingDataflowPartition_1/m_axis_0]
+connect_bd_net [get_bd_pins fifo_interface_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins fifo_interface_0/rst_n] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+delete_bd_objs [get_bd_nets custom_fifo_0_m_axis_tdata]
+connect_bd_net [get_bd_pins xlconcat_0/In0] [get_bd_pins fifo_interface_0/m_axis_tdata]
+WARNING: [BD 41-1306] The connection to interface pin </fifo_interface_0/m_axis_tdata> is being overridden by the user with net <fifo_interface_0_m_axis_tdata>. This pin will not be connected as a part of interface connection <m_axis>.
+connect_bd_net [get_bd_pins fifo_interface_0/m_axis_tdata] [get_bd_pins system_ila_0/probe0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {fifo_interface_0_m_axis_tdata }]
+true
+delete_bd_objs [get_bd_nets custom_fifo_0_m_axis_tlast]
+connect_bd_net [get_bd_pins axi_dma_0/s_axis_s2mm_tlast] [get_bd_pins fifo_interface_0/m_axis_tlast]
+WARNING: [BD 41-1306] The connection to interface pin </axi_dma_0/s_axis_s2mm_tlast> is being overridden by the user with net <fifo_interface_0_m_axis_tlast>. This pin will not be connected as a part of interface connection <S_AXIS_S2MM>.
+WARNING: [BD 41-1306] The connection to interface pin </fifo_interface_0/m_axis_tlast> is being overridden by the user with net <fifo_interface_0_m_axis_tlast>. This pin will not be connected as a part of interface connection <m_axis>.
+connect_bd_net [get_bd_pins fifo_interface_0/m_axis_tlast] [get_bd_pins system_ila_0/probe1]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {fifo_interface_0_m_axis_tlast }]
+true
+delete_bd_objs [get_bd_nets custom_fifo_0_m_axis_tvalid]
+connect_bd_net [get_bd_pins fifo_interface_0/m_axis_tvalid] [get_bd_pins axi_dma_0/s_axis_s2mm_tvalid]
+WARNING: [BD 41-1306] The connection to interface pin </fifo_interface_0/m_axis_tvalid> is being overridden by the user with net <fifo_interface_0_m_axis_tvalid>. This pin will not be connected as a part of interface connection <m_axis>.
+WARNING: [BD 41-1306] The connection to interface pin </axi_dma_0/s_axis_s2mm_tvalid> is being overridden by the user with net <fifo_interface_0_m_axis_tvalid>. This pin will not be connected as a part of interface connection <S_AXIS_S2MM>.
+delete_bd_objs [get_bd_nets axi_dma_0_s_axis_s2mm_tready]
+connect_bd_net [get_bd_pins axi_dma_0/s_axis_s2mm_tready] [get_bd_pins fifo_interface_0/m_axis_tready]
+WARNING: [BD 41-1306] The connection to interface pin </axi_dma_0/s_axis_s2mm_tready> is being overridden by the user with net <axi_dma_0_s_axis_s2mm_tready>. This pin will not be connected as a part of interface connection <S_AXIS_S2MM>.
+WARNING: [BD 41-1306] The connection to interface pin </fifo_interface_0/m_axis_tready> is being overridden by the user with net <axi_dma_0_s_axis_s2mm_tready>. This pin will not be connected as a part of interface connection <m_axis>.
+delete_bd_objs [get_bd_cells custom_fifo_0]
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+CRITICAL WARNING: [xilinx.com:ip:axi_dma:7.1-11] /axi_dma_0
+                   #################################### 
+                   S_AXIS_S2MM interface is unconnected
+                   ####################################
+make_wrapper -files [get_files /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd] -top
+INFO: [BD 41-1662] The design 'top.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd> 
+Wrote  : </home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/ui/bd_2ae56375.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tdata'(32) to pin: '/axi_dma_0/m_axis_mm2s_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tkeep'(4) to pin: '/axi_dma_0/m_axis_mm2s_tkeep'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tdata'(32) to pin: '/axi_dma_0/m_axis_mm2s_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tkeep'(4) to pin: '/axi_dma_0/m_axis_mm2s_tkeep'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/sim/top.v
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hdl/top_wrapper.v
+reset_run synth_1
+reset_run top_StreamingDataflowPartition_1_0_synth_1
+reset_run top_system_ila_0_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+INFO: [BD 41-1662] The design 'top.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tdata'(32) to pin: '/axi_dma_0/m_axis_mm2s_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tkeep'(4) to pin: '/axi_dma_0/m_axis_mm2s_tkeep'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_bid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_bid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_mem_intercon/m00_couplers/auto_pc/m_axi_rid'(1) to pin: '/axi_mem_intercon/m00_couplers/M_AXI_rid'(6) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tdata'(32) to pin: '/axi_dma_0/m_axis_mm2s_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_0_AXIS_tkeep'(4) to pin: '/axi_dma_0/m_axis_mm2s_tkeep'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_AWID'(6) to pin: '/axi_mem_intercon/M00_AXI_awid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_WID'(6) to pin: '/axi_mem_intercon/M00_AXI_wid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/processing_system7_0/S_AXI_HP0_ARID'(6) to pin: '/axi_mem_intercon/M00_AXI_arid'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/sim/top.v
+Verilog Output written to : /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hdl/top_wrapper.v
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_ooc.xdc'
+Exporting to file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/bd_0/hw_handoff/top_system_ila_0_1.hwh
+Generated Hardware Definition File /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/bd_0/synth/top_system_ila_0_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_ooc.xdc'
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fifo_interface_0 .
+Exporting to file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hw_handoff/top.hwh
+Generated Hardware Definition File /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_StreamingDataflowPartition_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_auto_pc_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_auto_us_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_auto_us_1
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_fifo_interface_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_system_ila_0_1
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_StreamingDataflowPartition_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_auto_pc_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 73a706d95f61f16c to dir: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/3/73a706d95f61f16c/top_auto_pc_1.dcp to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/3/73a706d95f61f16c/top_auto_pc_1_stub.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/3/73a706d95f61f16c/top_auto_pc_1_sim_netlist.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/3/73a706d95f61f16c/top_auto_pc_1_sim_netlist.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/3/73a706d95f61f16c/top_auto_pc_1_stub.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_stub.v
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_auto_pc_0, cache-ID = 73a706d95f61f16c; cache size = 90.795 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_auto_pc_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 94761b5042ad7a93 to dir: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/9/4/94761b5042ad7a93/top_auto_pc_2_stub.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/9/4/94761b5042ad7a93/top_auto_pc_2_sim_netlist.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/9/4/94761b5042ad7a93/top_auto_pc_2_sim_netlist.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/9/4/94761b5042ad7a93/top_auto_pc_2_stub.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/9/4/94761b5042ad7a93/top_auto_pc_2.dcp to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_1/top_auto_pc_1.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_auto_pc_1, cache-ID = 94761b5042ad7a93; cache size = 90.795 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_auto_us_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 789424992c122048 to dir: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/8/789424992c122048/top_auto_us_0_sim_netlist.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/8/789424992c122048/top_auto_us_0_stub.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/8/789424992c122048/top_auto_us_0_sim_netlist.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/8/789424992c122048/top_auto_us_0_stub.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/7/8/789424992c122048/top_auto_us_0.dcp to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_0/top_auto_us_0.dcp
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_auto_us_0, cache-ID = 789424992c122048; cache size = 90.795 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_auto_us_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry aa09ac918b3a297d to dir: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/a/a/aa09ac918b3a297d/top_auto_us_1_stub.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/a/a/aa09ac918b3a297d/top_auto_us_1.dcp to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/a/a/aa09ac918b3a297d/top_auto_us_1_sim_netlist.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/a/a/aa09ac918b3a297d/top_auto_us_1_stub.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_stub.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/a/a/aa09ac918b3a297d/top_auto_us_1_sim_netlist.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_us_1/top_auto_us_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_auto_us_1, cache-ID = aa09ac918b3a297d; cache size = 90.795 MB.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_fifo_interface_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_system_ila_0_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry d571d0812b23f14a to dir: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/d/5/d571d0812b23f14a/top_system_ila_0_1.dcp to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1.dcp.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1.dcp
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/d/5/d571d0812b23f14a/top_system_ila_0_1_sim_netlist.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_sim_netlist.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_sim_netlist.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/d/5/d571d0812b23f14a/top_system_ila_0_1_stub.v to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_stub.v.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_stub.v
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/d/5/d571d0812b23f14a/top_system_ila_0_1_sim_netlist.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_sim_netlist.vhdl
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.cache/ip/2023.2/d/5/d571d0812b23f14a/top_system_ila_0_1_stub.vhdl to /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_stub.vhdl.
+INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_1/top_system_ila_0_1_stub.vhdl
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP top_system_ila_0_1, cache-ID = d571d0812b23f14a; cache size = 90.795 MB.
+[Thu Mar 20 20:33:17 2025] Launched top_StreamingDataflowPartition_1_0_synth_1, top_fifo_interface_0_0_synth_1, synth_1...
+Run output will be captured here:
+top_StreamingDataflowPartition_1_0_synth_1: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_StreamingDataflowPartition_1_0_synth_1/runme.log
+top_fifo_interface_0_0_synth_1: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_fifo_interface_0_0_synth_1/runme.log
+synth_1: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/synth_1/runme.log
+[Thu Mar 20 20:33:17 2025] Launched impl_1...
+Run output will be captured here: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 9608.195 ; gain = 202.906 ; free physical = 11037 ; free virtual = 14492
+write_hw_platform -fixed -include_bit -force -file /home/lsh/2025/vivado_zynq_proj_scw60p79/top_wrapper.xsa
+INFO: [Project 1-1918] Creating Hardware Platform: /home/lsh/2025/vivado_zynq_proj_scw60p79/top_wrapper.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: /home/lsh/2025/vivado_zynq_proj_scw60p79/top_wrapper.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (/home/lsh/tools/Xilinx/Vivado/2023.2/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_register_slice:2.1 axi_register_slice_0
+endgroup
+set_property location {1 309 -137} [get_bd_cells axi_register_slice_0]
+set_property location {2.5 640 791} [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.WUSER_BITS_PER_BYTE.VALUE_SRC PROPAGATED CONFIG.PROTOCOL.VALUE_SRC USER CONFIG.READ_WRITE_MODE.VALUE_SRC PROPAGATED] [get_bd_cells axi_register_slice_0]
+set_property CONFIG.PROTOCOL {AXI4LITE} [get_bd_cells axi_register_slice_0]
+set_property location {3.5 947 982} [get_bd_cells axi_register_slice_0]
+connect_bd_net [get_bd_pins axi_register_slice_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_register_slice_0/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+set_property location {2 69 1042} [get_bd_cells axi_register_slice_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {2 69 1042} [get_bd_cells axi_register_slice_0]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axi_register_slice_0/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins axi_register_slice_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {3.5 947 982} [get_bd_cells axi_register_slice_0]'
+undo
+INFO: [Common 17-17] undo 'set_property CONFIG.PROTOCOL {AXI4LITE} [get_bd_cells axi_register_slice_0]'
+undo
+INFO: [Common 17-17] undo 'set_property -dict [list CONFIG.WUSER_BITS_PER_BYTE.VALUE_SRC PROPAGATED CONFIG.PROTOCOL.VALUE_SRC USER CONFIG.READ_WRITE_MODE.VALUE_SRC PROPAGATED] [get_bd_cells axi_register_slice_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {2.5 640 791} [get_bd_cells axi_dma_0]'
+undo
+INFO: [Common 17-17] undo 'set_property location {1 309 -137} [get_bd_cells axi_register_slice_0]'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:axi_register_slice:2.1 axi_register_slice_0'
+INFO: [Common 17-17] undo 'startgroup'

@@ -1,0 +1,1447 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 20 08:55:15 2025
+# Process ID: 94377
+# Current directory: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79
+# Command line: vivado -mode batch -source /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/ip_config.tcl
+# Log file: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/vivado.log
+# Journal file: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/vivado.jou
+# Running On: finn_dev_lsh, OS: Linux, CPU Frequency: 3494.400 MHz, CPU Physical cores: 10, Host memory: 16658 MB
+#-----------------------------------------------------------
+source /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/ip_config.tcl
+# set FREQ_MHZ 50
+# set NUM_AXILITE 2
+# if {$NUM_AXILITE > 9} {
+#     error "Maximum 10 AXI-Lite interfaces supported"
+# }
+# set NUM_AXIMM 2
+# set BOARD Pynq-Z1
+# set FPGA_PART xc7z020clg400-1
+# create_project finn_zynq_link ./ -part $FPGA_PART
+# set paths_prop [get_property BOARD_PART_REPO_PATHS [current_project]]
+# set paths_param [get_param board.repoPaths]
+# lappend paths_prop $::env(FINN_ROOT)/deps/board_files
+# lappend paths_param $::env(FINN_ROOT)/deps/board_files
+# set_property BOARD_PART_REPO_PATHS $paths_prop [current_project]
+# set_param board.repoPaths $paths_param
+# if {$BOARD == "ZCU104"} {
+#     set_property board_part xilinx.com:zcu104:part0:1.1 [current_project]
+#     set ZYNQ_TYPE "zynq_us+"
+# } elseif {$BOARD == "ZCU102"} {
+#     set_property board_part xilinx.com:zcu102:part0:3.3 [current_project]
+#     set ZYNQ_TYPE "zynq_us+"
+# } elseif {$BOARD == "RFSoC2x2"} {
+#     set_property board_part xilinx.com:rfsoc2x2:part0:1.1 [current_project]
+#     set ZYNQ_TYPE "zynq_us+"
+# } elseif {$BOARD == "RFSoC4x2"} {
+#     set_property board_part realdigital.org:rfsoc4x2:part0:1.0 [current_project]
+#     set ZYNQ_TYPE "zynq_us+"
+# } elseif {$BOARD == "Ultra96"} {
+#     set_property board_part avnet.com:ultra96v1:part0:1.2 [current_project]
+#     set ZYNQ_TYPE "zynq_us+"
+# } elseif {$BOARD == "Ultra96-V2"} {
+#     set_property board_part avnet.com:ultra96v2:part0:1.2 [current_project]
+#     set ZYNQ_TYPE "zynq_us+"
+# } elseif {$BOARD == "Pynq-Z2"} {
+#     set ZYNQ_TYPE "zynq_7000"
+#     set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+# } elseif {$BOARD == "Pynq-Z1"} {
+#     set ZYNQ_TYPE "zynq_7000"
+#     set_property board_part www.digilentinc.com:pynq-z1:part0:1.0 [current_project]
+# } elseif {$BOARD == "KV260_SOM"} {
+#     set ZYNQ_TYPE "zynq_us+"
+#     set_property board_part xilinx.com:kv260_som:part0:1.3 [current_project]
+# } else {
+#     puts "Unrecognized board"
+# }
+# create_bd_design "top"
+Wrote  : </tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd> 
+# if {$ZYNQ_TYPE == "zynq_us+"} {
+#     set zynq_ps_vlnv [get_property VLNV [get_ipdefs "xilinx.com:ip:zynq_ultra_ps_e:*"]]
+#     create_bd_cell -type ip -vlnv $zynq_ps_vlnv zynq_ps
+#     apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ps]
+#     #activate one slave port, deactivate the second master port
+#     set_property -dict [list CONFIG.PSU__USE__S_AXI_GP2 {1}] [get_bd_cells zynq_ps]
+#     set_property -dict [list CONFIG.PSU__USE__M_AXI_GP1 {0}] [get_bd_cells zynq_ps]
+#     #set frequency of PS clock (this can't always be exactly met)
+#     set_property -dict [list CONFIG.PSU__OVERRIDE__BASIC_CLOCK {0}] [get_bd_cells zynq_ps]
+#     set_property -dict [list CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ [expr int($FREQ_MHZ)]] [get_bd_cells zynq_ps]
+# } elseif {$ZYNQ_TYPE == "zynq_7000"} {
+#     set zynq_ps_vlnv [get_property VLNV [get_ipdefs "xilinx.com:ip:processing_system7:*"]]
+#     create_bd_cell -type ip -vlnv $zynq_ps_vlnv zynq_ps
+#     apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells zynq_ps]
+#     set_property -dict [list CONFIG.PCW_USE_S_AXI_HP0 {1}] [get_bd_cells zynq_ps]
+#     set_property -dict [list CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ [expr int($FREQ_MHZ)]] [get_bd_cells zynq_ps]
+# } else {
+#     puts "Unrecognized Zynq type"
+# }
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.009 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.033 . PS DDR interfaces might fail when entering negative DQS skew values. 
+# set interconnect_vlnv [get_property VLNV [get_ipdefs -all "xilinx.com:ip:axi_interconnect:*" -filter design_tool_contexts=~*IPI*]]
+# set smartconnect_vlnv [get_property VLNV [get_ipdefs "xilinx.com:ip:smartconnect:*"]]
+# create_bd_cell -type ip -vlnv $interconnect_vlnv axi_interconnect_0
+# create_bd_cell -type ip -vlnv $smartconnect_vlnv smartconnect_0
+# set_property -dict [list CONFIG.NUM_SI $NUM_AXIMM] [get_bd_cells smartconnect_0]
+# set_property -dict [list CONFIG.NUM_MI $NUM_AXILITE] [get_bd_cells axi_interconnect_0]
+# if {$ZYNQ_TYPE == "zynq_us+"} {
+#     set axi_peripheral_base 0xA0000000
+#     connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M00_AXI] [get_bd_intf_pins zynq_ps/S_AXI_HP0_FPD]
+#     connect_bd_intf_net [get_bd_intf_pins zynq_ps/M_AXI_HPM0_FPD] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/S00_AXI]
+#     #connect interconnect clocks and resets
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/pl_clk0} Freq {} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_interconnect_0/ACLK]
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/pl_clk0} Freq {} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_interconnect_0/S00_ACLK]
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/pl_clk0} Freq {} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins zynq_ps/saxihp0_fpd_aclk]
+# } elseif {$ZYNQ_TYPE == "zynq_7000"} {
+#     set axi_peripheral_base 0x40000000
+#     connect_bd_intf_net -boundary_type upper [get_bd_intf_pins zynq_ps/M_AXI_GP0] [get_bd_intf_pins axi_interconnect_0/S00_AXI]
+#     connect_bd_intf_net [get_bd_intf_pins smartconnect_0/M00_AXI] [get_bd_intf_pins zynq_ps/S_AXI_HP0]
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/FCLK_CLK0} Freq {} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_interconnect_0/ACLK]
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/FCLK_CLK0} Freq {} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins axi_interconnect_0/S00_ACLK]
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/FCLK_CLK0} Freq {} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins zynq_ps/S_AXI_HP0_ACLK]
+# }
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+# connect_bd_net [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins smartconnect_0/aresetn]
+# proc assign_axi_addr_proc {axi_intf_path} {
+#     #global variable holds current base address
+#     global axi_peripheral_base
+#     #infer range
+#     set range [expr 2**[get_property CONFIG.ADDR_WIDTH [get_bd_intf_pins $axi_intf_path]]]
+#     set range [expr $range < 4096 ? 4096 : $range]
+#     #align base address to range
+#     set offset [expr ($axi_peripheral_base + ($range-1)) & ~($range-1)]
+#     #perform assignment
+#     assign_bd_address [get_bd_addr_segs $axi_intf_path/Reg*] -offset $offset -range $range
+#     #advance base address
+#     set axi_peripheral_base [expr $offset + $range]
+# }
+# set_property ip_repo_paths [concat [get_property ip_repo_paths [current_project]] [list /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip]] [current_project]
+# update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+# create_bd_cell -type ip -vlnv xilinx_finn:finn:StreamingDataflowPartition_0:1.0 idma0
+# connect_bd_intf_net [get_bd_intf_pins idma0/m_axi_gmem0] [get_bd_intf_pins smartconnect_0/S00_AXI]
+# connect_bd_intf_net [get_bd_intf_pins idma0/s_axi_control_0] [get_bd_intf_pins axi_interconnect_0/M00_AXI]
+# assign_axi_addr_proc idma0/s_axi_control_0
+Slave segment '/idma0/s_axi_control_0/Reg0' is being assigned into address space '/zynq_ps/Data' at <0x4000_0000 [ 4K ]>.
+# connect_bd_net [get_bd_pins idma0/ap_clk] [get_bd_pins smartconnect_0/aclk]
+# connect_bd_net [get_bd_pins idma0/ap_rst_n] [get_bd_pins smartconnect_0/aresetn]
+# set_property ip_repo_paths [concat [get_property ip_repo_paths [current_project]] [list /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip $::env(FINN_ROOT)/finn-rtllib/memstream]] [current_project]
+# update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/FPGA/finn/finn-rtllib/memstream'.
+# create_bd_cell -type ip -vlnv xilinx_finn:finn:StreamingDataflowPartition_1:1.0 StreamingDataflowPartition_1
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1/ap_clk] [get_bd_pins smartconnect_0/aclk]
+# connect_bd_net [get_bd_pins StreamingDataflowPartition_1/ap_rst_n] [get_bd_pins smartconnect_0/aresetn]
+# connect_bd_intf_net [get_bd_intf_pins StreamingDataflowPartition_1/s_axis_0] [get_bd_intf_pins idma0/m_axis_0]
+# set_property ip_repo_paths [concat [get_property ip_repo_paths [current_project]] [list /tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip /tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip]] [current_project]
+# update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/FPGA/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip'.
+# create_bd_cell -type ip -vlnv xilinx_finn:finn:StreamingDataflowPartition_2:1.0 odma0
+# connect_bd_intf_net [get_bd_intf_pins odma0/m_axi_gmem0] [get_bd_intf_pins smartconnect_0/S01_AXI]
+# connect_bd_intf_net [get_bd_intf_pins odma0/s_axi_control_0] [get_bd_intf_pins axi_interconnect_0/M01_AXI]
+# assign_axi_addr_proc odma0/s_axi_control_0
+Slave segment '/odma0/s_axi_control_0/Reg0' is being assigned into address space '/zynq_ps/Data' at <0x4000_1000 [ 4K ]>.
+# connect_bd_net [get_bd_pins odma0/ap_clk] [get_bd_pins smartconnect_0/aclk]
+# connect_bd_net [get_bd_pins odma0/ap_rst_n] [get_bd_pins smartconnect_0/aresetn]
+# connect_bd_intf_net [get_bd_intf_pins odma0/s_axis_0] [get_bd_intf_pins StreamingDataflowPartition_1/m_axis_0]
+# if {1 == 1} {
+#     set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {idma0_m_axis_0}]
+#     set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {StreamingDataflowPartition_1_m_axis_0}]
+#     set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {smartconnect_0_M00_AXI}]
+#     apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list                                                               [get_bd_intf_nets smartconnect_0_M00_AXI] {AXI_R_ADDRESS "Data and Trigger" AXI_R_DATA "Data and Trigger" AXI_W_ADDRESS "Data and Trigger" AXI_W_DATA "Data and Trigger" AXI_W_RESPONSE "Data and Trigger" CLK_SRC "/zynq_ps/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" }                                                               [get_bd_intf_nets idma0_m_axis_0] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/zynq_ps/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" }                                                               [get_bd_intf_nets StreamingDataflowPartition_1_m_axis_0] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/zynq_ps/FCLK_CLK0" SYSTEM_ILA "Auto" APC_EN "0" }                                                              ]
+# }
+Debug Automation : Instantiating new System ILA block '/system_ila_0' with mode INTERFACE, 3 slot interface pins and 0 probe pins. Also setting parameters on this block, corresponding to newly enabled interface pins and probe pins as specified via Debug Automation.
+Debug Automation : Connecting source clock pin /zynq_ps/FCLK_CLK0 to the following sink clock pins :
+/system_ila_0/clk
+Debug Automation : Connecting source reset pin /rst_zynq_ps_50M/peripheral_aresetn to the following sink reset pins :
+/system_ila_0/resetn
+Debug Automation : Connecting interface connection /smartconnect_0_M00_AXI, to System ILA slot interface pin /system_ila_0/SLOT_0_AXI for debug.
+Debug Automation : Connecting interface connection /idma0_m_axis_0, to System ILA slot interface pin /system_ila_0/SLOT_1_AXIS for debug.
+Debug Automation : Connecting interface connection /StreamingDataflowPartition_1_m_axis_0, to System ILA slot interface pin /system_ila_0/SLOT_2_AXIS for debug.
+# if {$ZYNQ_TYPE == "zynq_us+"} {
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/pl_clk0} }  [get_bd_pins axi_interconnect_0/M*_ACLK]
+# } elseif {$ZYNQ_TYPE == "zynq_7000"} {
+#     apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ps/FCLK_CLK0} }  [get_bd_pins axi_interconnect_0/M*_ACLK]
+# }
+# save_bd_design
+Wrote  : </tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd> 
+# assign_bd_address
+Slave segment '/zynq_ps/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/idma0/m_axi_gmem0' at <0x0000_0000 [ 512M ]>.
+Slave segment '/zynq_ps/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/odma0/m_axi_gmem0' at <0x0000_0000 [ 512M ]>.
+# validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to any ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. 
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/zynq_ps' with propagated value(50). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_S_AXI_HP0_FREQMHZ(10) on '/zynq_ps' with propagated value(50). Command ignored
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/smartconnect_0/S00_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [BD 5-943] Reserving offset range <0x0000_0000 [ 512M ]> from slave interface '/smartconnect_0/S01_AXI' to master interface '/smartconnect_0/M00_AXI'. This will be used by smartconnect on path for routing.
+INFO: [xilinx.com:ip:smartconnect:1.0-1] top_smartconnect_0_0: SmartConnect top_smartconnect_0_0 is in High-performance Mode.
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-926] Following properties on interface pin /idma0/s_axi_control_0 have been updated from connected ip, but BD cell '/idma0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	SUPPORTS_NARROW_BURST = 0
+	MAX_BURST_LENGTH = 1
+
+Please resolve any mismatches by directly setting properties on BD cell </idma0> to completely resolve these warnings.
+WARNING: [BD 41-926] Following properties on interface pin /idma0/m_axi_gmem0 have been updated from connected ip, but BD cell '/idma0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	SUPPORTS_NARROW_BURST = 0
+
+Please resolve any mismatches by directly setting properties on BD cell </idma0> to completely resolve these warnings.
+WARNING: [BD 41-926] Following properties on interface pin /odma0/s_axi_control_0 have been updated from connected ip, but BD cell '/odma0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	SUPPORTS_NARROW_BURST = 0
+	MAX_BURST_LENGTH = 1
+
+Please resolve any mismatches by directly setting properties on BD cell </odma0> to completely resolve these warnings.
+WARNING: [BD 41-926] Following properties on interface pin /odma0/m_axi_gmem0 have been updated from connected ip, but BD cell '/odma0' does not accept parameter changes, so they may not be synchronized with cell properties:
+	SUPPORTS_NARROW_BURST = 0
+
+Please resolve any mismatches by directly setting properties on BD cell </odma0> to completely resolve these warnings.
+validate_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1839.391 ; gain = 180.289 ; free physical = 7798 ; free virtual = 14677
+# set_property SYNTH_CHECKPOINT_MODE "Hierarchical" [ get_files top.bd ]
+# make_wrapper -files [get_files top.bd] -import -fileset sources_1 -top
+INFO: [BD 41-1662] The design 'top.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.srcs/sources_1/bd/top/top.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_awlock'(1) to pin: '/idma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/idma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXIS_tdata'(32) to pin: '/idma0/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_awlock'(1) to pin: '/odma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/odma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_awlock'(1) to pin: '/idma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/idma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXIS_tdata'(32) to pin: '/idma0/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_awlock'(1) to pin: '/odma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/odma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/sim/top.v
+Verilog Output written to : /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hdl/top_wrapper.v
+# set_property strategy Flow_PerfOptimized_high [get_runs synth_1]
+# set_property STEPS.SYNTH_DESIGN.ARGS.DIRECTIVE AlternateRoutability [get_runs synth_1]
+# set_property STEPS.SYNTH_DESIGN.ARGS.RETIMING true [get_runs synth_1]
+WARNING: [Common 17-599] Property 'STEPS.SYNTH_DESIGN.ARGS.RETIMING' is deprecated for object type 'run'. Please use '-global_retiming' instead.
+# set_property strategy Performance_ExtraTimingOpt [get_runs impl_1]
+# set_property STEPS.OPT_DESIGN.ARGS.DIRECTIVE Explore [get_runs impl_1]
+# set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore [get_runs impl_1]
+# set_property STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore [get_runs impl_1]
+# set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+# launch_runs -to_step write_bitstream impl_1
+INFO: [BD 41-1662] The design 'top.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_awlock'(1) to pin: '/idma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/idma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXIS_tdata'(32) to pin: '/idma0/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_awlock'(1) to pin: '/odma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/odma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_awlock'(1) to pin: '/idma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S00_AXI_arlock'(1) to pin: '/idma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_1_AXIS_tdata'(32) to pin: '/idma0/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_awlock'(1) to pin: '/odma0/m_axi_gmem0_awlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/smartconnect_0/S01_AXI_arlock'(1) to pin: '/odma0/m_axi_gmem0_arlock'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/system_ila_0/SLOT_2_AXIS_tdata'(32) to pin: '/StreamingDataflowPartition_1/m_axis_0_tdata'(8) - Only lower order bits will be connected.
+Verilog Output written to : /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/sim/top.v
+Verilog Output written to : /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hdl/top_wrapper.v
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ps .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+Exporting to file /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/hw_handoff/top_smartconnect_0_0.hwh
+Generated Hardware Definition File /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/synth/top_smartconnect_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block smartconnect_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_zynq_ps_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block idma0 .
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 18.0 is provided. The value is converted to long type(18)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 18.0 is provided. The value is converted to long type(18)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 14.0 is provided. The value is converted to long type(14)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 14.0 is provided. The value is converted to long type(14)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 12.0 is provided. The value is converted to long type(12)
+WARNING: [IP_Flow 19-4684] Expected long value for param AXILITE_ADDR_WIDTH but, float/scientific notation value 12.0 is provided. The value is converted to long type(12)
+INFO: [BD 41-1029] Generation completed for the IP Integrator block StreamingDataflowPartition_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block odma0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/top_system_ila_0_0_ooc.xdc'
+Exporting to file /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/bd_0/hw_handoff/top_system_ila_0_0.hwh
+Generated Hardware Definition File /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/bd_0/synth/top_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s00_couplers/auto_pc .
+Exporting to file /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/hw_handoff/top.hwh
+Generated Hardware Definition File /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/synth/top.hwdef
+INFO: [IP_Flow 19-6930] IPCACHE: runCacheChecks() number of threads = 8
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_StreamingDataflowPartition_1_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_auto_pc_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_idma0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_odma0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_rst_zynq_ps_50M_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_smartconnect_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_system_ila_0_0
+INFO: [IP_Flow 19-6921] IPCACHE: Adding cache check func to thread queue for IP top_xbar_0
+INFO: [IP_Flow 19-8020] IPCACHE: runCacheChecks() calling threadPool finishWork()
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_StreamingDataflowPartition_1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_auto_pc_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_smartconnect_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_idma0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_odma0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_rst_zynq_ps_50M_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_system_ila_0_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_xbar_0
+[Thu Mar 20 08:55:53 2025] Launched top_system_ila_0_0_synth_1, top_zynq_ps_0_synth_1, top_rst_zynq_ps_50M_0_synth_1, top_smartconnect_0_0_synth_1, top_StreamingDataflowPartition_1_0_synth_1, top_idma0_0_synth_1, top_odma0_0_synth_1, top_xbar_0_synth_1, top_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+top_system_ila_0_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_system_ila_0_0_synth_1/runme.log
+top_zynq_ps_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_zynq_ps_0_synth_1/runme.log
+top_rst_zynq_ps_50M_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_rst_zynq_ps_50M_0_synth_1/runme.log
+top_smartconnect_0_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_smartconnect_0_0_synth_1/runme.log
+top_StreamingDataflowPartition_1_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_StreamingDataflowPartition_1_0_synth_1/runme.log
+top_idma0_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_idma0_0_synth_1/runme.log
+top_odma0_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_odma0_0_synth_1/runme.log
+top_xbar_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_xbar_0_synth_1/runme.log
+top_auto_pc_0_synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_auto_pc_0_synth_1/runme.log
+synth_1: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/synth_1/runme.log
+[Thu Mar 20 08:55:53 2025] Launched impl_1...
+Run output will be captured here: /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2306.406 ; gain = 253.914 ; free physical = 7317 ; free virtual = 14338
+# wait_on_run [get_runs impl_1]
+[Thu Mar 20 08:55:53 2025] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log top_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_wrapper.tcl -notrace
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source top_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/FPGA/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip'.
+Command: link_design -top top_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_StreamingDataflowPartition_1_0/top_StreamingDataflowPartition_1_0.dcp' for cell 'top_i/StreamingDataflowPartition_1'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_idma0_0/top_idma0_0.dcp' for cell 'top_i/idma0'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_odma0_0/top_odma0_0.dcp' for cell 'top_i/odma0'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_rst_zynq_ps_50M_0/top_rst_zynq_ps_50M_0.dcp' for cell 'top_i/rst_zynq_ps_50M'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/top_smartconnect_0_0.dcp' for cell 'top_i/smartconnect_0'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/top_system_ila_0_0.dcp' for cell 'top_i/system_ila_0'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_zynq_ps_0/top_zynq_ps_0.dcp' for cell 'top_i/zynq_ps'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_xbar_0/top_xbar_0.dcp' for cell 'top_i/axi_interconnect_0/xbar'
+INFO: [Project 1-454] Reading design checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_auto_pc_0/top_auto_pc_0.dcp' for cell 'top_i/axi_interconnect_0/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.26 . Memory (MB): peak = 1942.367 ; gain = 0.000 ; free physical = 5985 ; free virtual = 13198
+INFO: [Netlist 29-17] Analyzing 2633 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: top_i/system_ila_0/inst/ila_lib UUID: 3313bff3-8a55-5272-bab4-c0c7e458d2e8 
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:85]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:94]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:107]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:110]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:119]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:122]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:131]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:134]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:137]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:143]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:146]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:155]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:167]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:171]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:174]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc:178]
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_23/bd_acc6_swn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'top_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'top_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'top_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'top_i/system_ila_0/inst/ila_lib/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_rst_zynq_ps_50M_0/top_rst_zynq_ps_50M_0.xdc] for cell 'top_i/rst_zynq_ps_50M/U0'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_rst_zynq_ps_50M_0/top_rst_zynq_ps_50M_0.xdc] for cell 'top_i/rst_zynq_ps_50M/U0'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_rst_zynq_ps_50M_0/top_rst_zynq_ps_50M_0_board.xdc] for cell 'top_i/rst_zynq_ps_50M/U0'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_rst_zynq_ps_50M_0/top_rst_zynq_ps_50M_0_board.xdc] for cell 'top_i/rst_zynq_ps_50M/U0'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc] for cell 'top_i/smartconnect_0/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:1]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:2]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:3]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:4]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:5]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:6]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:8]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:9]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc:10]
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/smartconnect.xdc] for cell 'top_i/smartconnect_0/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:85]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:88]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:91]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:94]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:97]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:100]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:104]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:107]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:110]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:113]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:116]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:119]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:122]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:125]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:128]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-13' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:131]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:134]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:137]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:140]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:143]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:146]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:149]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:152]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:155]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:161]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:164]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:167]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:171]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-4' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:174]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc:178]
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_30/bd_acc6_m00bn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:49]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:52]
+INFO: [Common 17-14] Message 'Vivado 12-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:55]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:59]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:63]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:66]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:70]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:73]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:76]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:79]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:82]
+INFO: [Common 17-14] Message 'Vivado_Tcl 4-921' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc:82]
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_29/bd_acc6_m00wn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_28/bd_acc6_m00awn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_28/bd_acc6_m00awn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_27/bd_acc6_m00rn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_27/bd_acc6_m00rn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_26/bd_acc6_m00arn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_26/bd_acc6_m00arn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_24/bd_acc6_sbn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_b_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_24/bd_acc6_sbn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_b_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_zynq_ps_0/top_zynq_ps_0.xdc] for cell 'top_i/zynq_ps/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_zynq_ps_0/top_zynq_ps_0.xdc] for cell 'top_i/zynq_ps/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_22/bd_acc6_sawn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_22/bd_acc6_sawn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_21/bd_acc6_srn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_r_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_21/bd_acc6_srn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_r_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_20/bd_acc6_sarn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_ar_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_20/bd_acc6_sarn_1_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s01_nodes/s01_ar_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_15/bd_acc6_sbn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_15/bd_acc6_sbn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_b_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_14/bd_acc6_swn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_14/bd_acc6_swn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_13/bd_acc6_sawn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_13/bd_acc6_sawn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_12/bd_acc6_srn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_12/bd_acc6_srn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_11/bd_acc6_sarn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_11/bd_acc6_sarn_0_clocks.xdc] for cell 'top_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_1/bd_acc6_psr_aclk_0.xdc] for cell 'top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_1/bd_acc6_psr_aclk_0.xdc] for cell 'top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_1/bd_acc6_psr_aclk_0_board.xdc] for cell 'top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_smartconnect_0_0/bd_0/ip/ip_1/bd_acc6_psr_aclk_0_board.xdc] for cell 'top_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-1714] 58 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 656 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2972.207 ; gain = 0.000 ; free physical = 5310 ; free virtual = 12538
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 476 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 300 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 172 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+33 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2972.207 ; gain = 1466.715 ; free physical = 5310 ; free virtual = 12537
+Command: opt_design -directive Explore
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: Explore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.86 ; elapsed = 00:00:00.38 . Memory (MB): peak = 2972.207 ; gain = 0.000 ; free physical = 5302 ; free virtual = 12530
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+
+Phase 1.1.1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3093.809 ; gain = 0.000 ; free physical = 5017 ; free virtual = 12250
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3133.621 ; gain = 0.000 ; free physical = 4990 ; free virtual = 12223
+Phase 1.1.1 Generate And Synthesize Debug Cores | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4990 ; free virtual = 12223
+Phase 1.1 Core Generation And Design Setup | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4990 ; free virtual = 12223
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4990 ; free virtual = 12223
+Phase 1 Initialization | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4990 ; free virtual = 12223
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4981 ; free virtual = 12214
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12204
+Phase 2 Timer Update And Timing Data Collection | Checksum: 18a32586e
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12204
+
+Phase 3 Retarget
+INFO: [Opt 31-1566] Pulled 6 inverters resulting in an inversion of 45 pins
+INFO: [Opt 31-138] Pushed 25 inverter(s) to 126 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 16ee46f18
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:01:12 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12203
+Retarget | Checksum: 16ee46f18
+INFO: [Opt 31-389] Phase Retarget created 329 cells and removed 389 cells
+INFO: [Opt 31-1021] In phase Retarget, 125 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 7 inverter(s) to 27 load pin(s).
+Phase 4 Constant propagation | Checksum: ca1a1d4c
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:01:13 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4972 ; free virtual = 12205
+Constant propagation | Checksum: ca1a1d4c
+INFO: [Opt 31-389] Phase Constant propagation created 328 cells and removed 3381 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 109 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: 133e25df7
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12204
+Sweep | Checksum: 133e25df7
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1130 cells
+INFO: [Opt 31-1021] In phase Sweep, 1550 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 133e25df7
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12204
+BUFG optimization | Checksum: 133e25df7
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][0]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][11]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][12]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][13]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][14]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][15]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][16]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][17]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][18]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][19]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][1]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][20]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][21]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][22]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][23]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][24]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][25]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][26]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][27]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][28]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][29]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][2]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][31]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][32]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][33]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][3]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][4]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][5]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][6]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][7]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][8]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][9]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][0]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][10]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][11]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][12]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][1]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][2]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][3]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][4]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][5]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][6]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][7]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][8]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][9]_srl32 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][0]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][10]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][11]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][12]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][13]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][14]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][15]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][16]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][17]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][18]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][19]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][1]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][2]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][3]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][8]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][9]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][0]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bresp_fifo_0/memory_reg[3][1]_srl4 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_CDONE/I_YESLUT6.U_SRL32_A due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_CDONE/I_YESLUT6.U_SRL32_B due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS0/I_YESLUT6.U_SRL32_A due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS0/I_YESLUT6.U_SRL32_B due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS0/I_YESLUT6.U_SRL32_C due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS0/I_YESLUT6.U_SRL32_D due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.U_SRL32_A due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.U_SRL32_B due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.U_SRL32_C due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/system_ila_0/inst/ila_lib/inst/ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.U_SRL32_D due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/bus_read/fifo_burst/U_fifo_srl/mem_reg[14][0]_srl15 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][0]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][10]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][11]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][12]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][13]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][14]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][15]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][16]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][17]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][18]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][19]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][1]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][20]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][21]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][22]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][23]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][24]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][25]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][26]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][27]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][28]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][29]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][2]_srl6 due to none static srl address bits
+WARNING: [Opt 31-1131] Can not pull register out from top_i/idma0/inst/StreamingDataflowPartition_0_IODMA_hls_0/inst/gmem_m_axi_U/load_unit/fifo_rreq/U_fifo_srl/mem_reg[5][30]_srl6 due to none static srl address bits
+INFO: [Common 17-14] Message 'Opt 31-1131' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 133e25df7
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12203
+Shift Register Optimization | Checksum: 133e25df7
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+INFO: [Opt 31-1555] control_set_opt supports Versal devices only, and device 7z020 is unsupported
+
+Phase 8 Post Processing Netlist
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 4 pins
+Phase 8 Post Processing Netlist | Checksum: b30e496f
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4971 ; free virtual = 12203
+Post Processing Netlist | Checksum: b30e496f
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 117 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 11f171ea0
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4970 ; free virtual = 12203
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3133.621 ; gain = 0.000 ; free physical = 4970 ; free virtual = 12203
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 11f171ea0
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4970 ; free virtual = 12203
+Phase 9 Finalization | Checksum: 11f171ea0
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4970 ; free virtual = 12203
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             329  |             389  |                                            125  |
+|  Constant propagation         |             328  |            3381  |                                            109  |
+|  Sweep                        |               0  |            1130  |                                           1550  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                            117  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 11f171ea0
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:01:14 . Memory (MB): peak = 3133.621 ; gain = 59.656 ; free physical = 4970 ; free virtual = 12203
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3133.621 ; gain = 0.000 ; free physical = 4970 ; free virtual = 12203
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3133.621 ; gain = 0.000 ; free physical = 4970 ; free virtual = 12203
+Ending Netlist Obfuscation Task | Checksum: 11f171ea0
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3133.621 ; gain = 0.000 ; free physical = 4970 ; free virtual = 12203
+INFO: [Common 17-83] Releasing license: Implementation
+64 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:16 . Memory (MB): peak = 3133.621 ; gain = 161.414 ; free physical = 4970 ; free virtual = 12203
+INFO: [runtcl-4] Executing : report_drc -file top_wrapper_drc_opted.rpt -pb top_wrapper_drc_opted.pb -rpx top_wrapper_drc_opted.rpx
+Command: report_drc -file top_wrapper_drc_opted.rpt -pb top_wrapper_drc_opted.pb -rpx top_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4927 ; free virtual = 12162
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4927 ; free virtual = 12162
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4912 ; free virtual = 12151
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4911 ; free virtual = 12153
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4911 ; free virtual = 12153
+Wrote Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4911 ; free virtual = 12153
+Write Physdb Complete: Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3173.641 ; gain = 0.000 ; free physical = 4911 ; free virtual = 12153
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_opt.dcp' has been generated.
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design -directive ExtraTimingOpt
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 46-5] The placer was invoked with the 'ExtraTimingOpt' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3235.590 ; gain = 0.000 ; free physical = 4878 ; free virtual = 12125
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 6664fef4
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3235.590 ; gain = 0.000 ; free physical = 4878 ; free virtual = 12125
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3235.590 ; gain = 0.000 ; free physical = 4878 ; free virtual = 12125
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e64e91eb
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.99 . Memory (MB): peak = 3235.590 ; gain = 0.000 ; free physical = 4874 ; free virtual = 12121
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1af5c71e2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3260.906 ; gain = 25.316 ; free physical = 4808 ; free virtual = 12058
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1af5c71e2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3260.906 ; gain = 25.316 ; free physical = 4808 ; free virtual = 12058
+Phase 1 Placer Initialization | Checksum: 1af5c71e2
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 3260.906 ; gain = 25.316 ; free physical = 4808 ; free virtual = 12058
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2068b0c85
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:05 . Memory (MB): peak = 3303.469 ; gain = 67.879 ; free physical = 4790 ; free virtual = 12040
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1d9e123c1
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 3303.469 ; gain = 67.879 ; free physical = 4795 ; free virtual = 12046
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 1d9e123c1
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 3303.469 ; gain = 67.879 ; free physical = 4795 ; free virtual = 12046
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 12bea1736
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:15 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4777 ; free virtual = 12028
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 919 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 406 nets or LUTs. Breaked 0 LUT, combined 406 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3325.312 ; gain = 0.000 ; free physical = 4770 ; free virtual = 12023
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            406  |                   406  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            406  |                   406  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 12d548631
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:17 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12021
+Phase 2.4 Global Placement Core | Checksum: 14f58b05f
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:18 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12021
+Phase 2 Global Placement | Checksum: 14f58b05f
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:18 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12021
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 14254551b
+
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:19 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12021
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: efcc260f
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:21 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4766 ; free virtual = 12020
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 154a89c57
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:21 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4766 ; free virtual = 12020
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 14fee8513
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:21 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4766 ; free virtual = 12020
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: 1327ca3a8
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:28 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12022
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: 1199b1603
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:29 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12022
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: 145c532bb
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:29 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12022
+Phase 3 Detail Placement | Checksum: 145c532bb
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:29 . Memory (MB): peak = 3325.312 ; gain = 89.723 ; free physical = 4768 ; free virtual = 12022
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1873e9540
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=8.749 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1f78098dd
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.91 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4731 ; free virtual = 11985
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1f78098dd
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4731 ; free virtual = 11985
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1873e9540
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4731 ; free virtual = 11985
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=8.749. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 14b1580a3
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+Phase 4.1 Post Commit Optimization | Checksum: 14b1580a3
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 14b1580a3
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 14b1580a3
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+Phase 4.3 Placer Reporting | Checksum: 14b1580a3
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4732 ; free virtual = 11985
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:34 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 177063300
+
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:35 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+Ending Placer Task | Checksum: 16abf2b8e
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:35 . Memory (MB): peak = 3346.109 ; gain = 110.520 ; free physical = 4732 ; free virtual = 11985
+101 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:16 ; elapsed = 00:00:35 . Memory (MB): peak = 3346.109 ; gain = 172.469 ; free physical = 4732 ; free virtual = 11985
+INFO: [runtcl-4] Executing : report_io -file top_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4732 ; free virtual = 11986
+INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_placed.rpt -pb top_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4725 ; free virtual = 11980
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.08 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4714 ; free virtual = 11979
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.94 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4680 ; free virtual = 11980
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4680 ; free virtual = 11980
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4680 ; free virtual = 11980
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4677 ; free virtual = 11980
+Wrote Device Cache: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4676 ; free virtual = 11980
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3346.109 ; gain = 0.000 ; free physical = 4676 ; free virtual = 11980
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_placed.dcp' has been generated.
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4705 ; free virtual = 11974
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+111 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4687 ; free virtual = 11965
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4649 ; free virtual = 11963
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4649 ; free virtual = 11963
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4649 ; free virtual = 11964
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4646 ; free virtual = 11963
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4645 ; free virtual = 11964
+Write Physdb Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3370.121 ; gain = 0.000 ; free physical = 4645 ; free virtual = 11964
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_physopt.dcp' has been generated.
+Command: route_design -directive NoTimingRelaxation
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'NoTimingRelaxation'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: fd396ae3 ConstDB: 0 ShapeSum: 6d85c0ab RouteDB: 0
+Post Restoration Checksum: NetGraph: 7df7173d | NumContArr: eecdb42c | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2f216c0a3
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 3467.438 ; gain = 50.656 ; free physical = 4563 ; free virtual = 11849
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2f216c0a3
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 3468.438 ; gain = 51.656 ; free physical = 4563 ; free virtual = 11849
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2f216c0a3
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 3468.438 ; gain = 51.656 ; free physical = 4562 ; free virtual = 11849
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1f61a796f
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 3496.453 ; gain = 79.672 ; free physical = 4529 ; free virtual = 11816
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.240  | TNS=0.000  | WHS=-0.205 | THS=-456.538|
+
+
+Phase 2.4 Update Timing for Bus Skew
+
+Phase 2.4.1 Update Timing
+Phase 2.4.1 Update Timing | Checksum: 262eee7ef
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 3496.453 ; gain = 79.672 ; free physical = 4529 ; free virtual = 11817
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=9.240  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 2.4 Update Timing for Bus Skew | Checksum: 26e1fb9a5
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 3512.453 ; gain = 95.672 ; free physical = 4526 ; free virtual = 11817
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 29325
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 29325
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 2687e3a15
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4502 ; free virtual = 11793
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 2687e3a15
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:18 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4502 ; free virtual = 11793
+
+Phase 3.2 Initial Net Routing
+Phase 3.2 Initial Net Routing | Checksum: 1cb62e905
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:19 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4504 ; free virtual = 11795
+Phase 3 Initial Routing | Checksum: 1cb62e905
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:19 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4504 ; free virtual = 11795
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 2340
+ Number of Nodes with overlaps = 80
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.728  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1e9ed9539
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:25 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.728  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 24d506d1c
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:25 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.728  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 1e03e5705
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+Phase 4 Rip-up And Reroute | Checksum: 1e03e5705
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1e03e5705
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1e03e5705
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+Phase 5 Delay and Skew Optimization | Checksum: 1e03e5705
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:26 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1985bd662
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:27 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=7.843  | TNS=0.000  | WHS=0.013  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 21a91b711
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:27 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+Phase 6 Post Hold Fix | Checksum: 21a91b711
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:27 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 5.81925 %
+  Global Horizontal Routing Utilization  = 7.83342 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 21a91b711
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:27 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 21a91b711
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:27 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4497 ; free virtual = 11789
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 222e57608
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:28 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4497 ; free virtual = 11788
+
+Phase 10 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=7.812  | TNS=0.000  | WHS=0.012  | THS=0.000  |
+
+Phase 10 Post Router Timing | Checksum: 1cd8665a2
+
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:30 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+INFO: [Route 35-61] The design met the timing requirement.
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 11 Post-Route Event Processing
+Phase 11 Post-Route Event Processing | Checksum: 224d88a2e
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:31 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+Ending Routing Task | Checksum: 224d88a2e
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:31 . Memory (MB): peak = 3518.734 ; gain = 101.953 ; free physical = 4501 ; free virtual = 11792
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+129 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:13 ; elapsed = 00:00:32 . Memory (MB): peak = 3518.734 ; gain = 148.613 ; free physical = 4501 ; free virtual = 11792
+INFO: [runtcl-4] Executing : report_drc -file top_wrapper_drc_routed.rpt -pb top_wrapper_drc_routed.pb -rpx top_wrapper_drc_routed.rpx
+Command: report_drc -file top_wrapper_drc_routed.rpt -pb top_wrapper_drc_routed.pb -rpx top_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file top_wrapper_power_routed.rpt -pb top_wrapper_power_summary_routed.pb -rpx top_wrapper_power_routed.rpx
+Command: report_power -file top_wrapper_power_routed.rpt -pb top_wrapper_power_summary_routed.pb -rpx top_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+139 Infos, 201 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file top_wrapper_route_status.rpt -pb top_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_wrapper_timing_summary_routed.rpt -pb top_wrapper_timing_summary_routed.pb -rpx top_wrapper_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_wrapper_bus_skew_routed.rpt -pb top_wrapper_bus_skew_routed.pb -rpx top_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4422 ; free virtual = 11741
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.98 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4386 ; free virtual = 11739
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4386 ; free virtual = 11739
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.26 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4380 ; free virtual = 11740
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4377 ; free virtual = 11740
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4376 ; free virtual = 11739
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4376 ; free virtual = 11739
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_routed.dcp' has been generated.
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode 
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:02 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4415 ; free virtual = 11740
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -warn_on_violation -file top_wrapper_timing_summary_postroute_physopted.rpt -pb top_wrapper_timing_summary_postroute_physopted.pb -rpx top_wrapper_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_wrapper_bus_skew_postroute_physopted.rpt -pb top_wrapper_bus_skew_postroute_physopted.pb -rpx top_wrapper_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4401 ; free virtual = 11737
+Wrote PlaceDB: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.96 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4365 ; free virtual = 11736
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4365 ; free virtual = 11736
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.6 ; elapsed = 00:00:00.23 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4358 ; free virtual = 11735
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4355 ; free virtual = 11735
+Wrote Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4354 ; free virtual = 11735
+Write Physdb Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3622.637 ; gain = 0.000 ; free physical = 4354 ; free virtual = 11735
+INFO: [Common 17-1381] The checkpoint '/tmp/finn_dev_lsh/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/impl_1/top_wrapper_postroute_physopt.dcp' has been generated.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s01_nodes/s01_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s01_nodes/s01_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block top_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the top_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+Command: write_bitstream -force top_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP top_i/StreamingDataflowPartition_1/inst/StreamingDataflowPartition_1_MVAU_hls_0/StreamingDataflowPartition_1_MVAU_hls_0/inst/grp_Matrix_Vector_Activate_Stream_Batch_fu_60/mac_muladd_8ns_4s_32s_32_4_1_U2/StreamingDataflowPartition_1_MVAU_hls_0_mac_muladd_8ns_4s_32s_32_4_1_DSP48_0_U/p_reg_reg input top_i/StreamingDataflowPartition_1/inst/StreamingDataflowPartition_1_MVAU_hls_0/StreamingDataflowPartition_1_MVAU_hls_0/inst/grp_Matrix_Vector_Activate_Stream_Batch_fu_60/mac_muladd_8ns_4s_32s_32_4_1_U2/StreamingDataflowPartition_1_MVAU_hls_0_mac_muladd_8ns_4s_32s_32_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP top_i/StreamingDataflowPartition_1/inst/StreamingDataflowPartition_1_MVAU_hls_1/StreamingDataflowPartition_1_MVAU_hls_1/inst/grp_Matrix_Vector_Activate_Stream_Batch_fu_60/mac_muladd_4ns_4s_32s_32_4_1_U2/StreamingDataflowPartition_1_MVAU_hls_1_mac_muladd_4ns_4s_32s_32_4_1_DSP48_0_U/p_reg_reg input top_i/StreamingDataflowPartition_1/inst/StreamingDataflowPartition_1_MVAU_hls_1/StreamingDataflowPartition_1_MVAU_hls_1/inst/grp_Matrix_Vector_Activate_Stream_Batch_fu_60/mac_muladd_4ns_4s_32s_32_4_1_U2/StreamingDataflowPartition_1_MVAU_hls_1_mac_muladd_4ns_4s_32s_32_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP top_i/StreamingDataflowPartition_1/inst/StreamingDataflowPartition_1_MVAU_hls_2/StreamingDataflowPartition_1_MVAU_hls_2/inst/grp_Matrix_Vector_Activate_Stream_Batch_fu_60/mac_muladd_4ns_4s_32s_32_4_1_U2/StreamingDataflowPartition_1_MVAU_hls_2_mac_muladd_4ns_4s_32s_32_4_1_DSP48_0_U/p_reg_reg input top_i/StreamingDataflowPartition_1/inst/StreamingDataflowPartition_1_MVAU_hls_2/StreamingDataflowPartition_1_MVAU_hls_2/inst/grp_Matrix_Vector_Activate_Stream_Batch_fu_60/mac_muladd_4ns_4s_32s_32_4_1_U2/StreamingDataflowPartition_1_MVAU_hls_2_mac_muladd_4ns_4s_32s_32_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A3*A5)+(A3*(~A5)*(~A2))+((~A3))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A5))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC PDCN-1569] LUT equation term check: Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A3*A5)+(A3*(~A5)*(~A2))+((~A3))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+WARNING: [DRC RTSTAT-10] No routable loads: 25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TMS, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg[2], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i... and (the first 15 of 23 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 7 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./top_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-1876] WebTalk data collection is mandatory when using a ULT device. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+46 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:26 ; elapsed = 00:00:21 . Memory (MB): peak = 3870.164 ; gain = 247.527 ; free physical = 4118 ; free virtual = 11470
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 09:08:48 2025...
+[Thu Mar 20 09:08:49 2025] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:13:39 ; elapsed = 00:12:56 . Memory (MB): peak = 2306.406 ; gain = 0.000 ; free physical = 6972 ; free virtual = 14322
+# open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2374.930 ; gain = 0.000 ; free physical = 6729 ; free virtual = 14079
+INFO: [Netlist 29-17] Analyzing 2618 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2506.797 ; gain = 10.273 ; free physical = 6596 ; free virtual = 13947
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3078.531 ; gain = 0.000 ; free physical = 6055 ; free virtual = 13405
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3078.531 ; gain = 0.000 ; free physical = 6055 ; free virtual = 13405
+Read PlaceDB: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.73 . Memory (MB): peak = 3098.602 ; gain = 20.070 ; free physical = 6035 ; free virtual = 13385
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3098.602 ; gain = 0.000 ; free physical = 6035 ; free virtual = 13385
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.3 . Memory (MB): peak = 3106.602 ; gain = 8.000 ; free physical = 6027 ; free virtual = 13377
+Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3106.602 ; gain = 28.070 ; free physical = 6027 ; free virtual = 13377
+Restored from archive | CPU: 1.080000 secs | Memory: 42.657387 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 3106.602 ; gain = 31.039 ; free physical = 6027 ; free virtual = 13377
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3106.602 ; gain = 0.000 ; free physical = 6026 ; free virtual = 13377
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 465 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 300 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 162 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3106.637 ; gain = 800.230 ; free physical = 6026 ; free virtual = 13377
+# report_utilization -hierarchical -hierarchical_depth 4 -file synth_report.xml -format xml
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 09:09:00 2025...

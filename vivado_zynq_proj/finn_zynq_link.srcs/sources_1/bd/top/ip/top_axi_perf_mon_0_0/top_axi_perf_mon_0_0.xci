@@ -1,0 +1,2053 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "top_axi_perf_mon_0_0",
+    "cell_name": "axi_perf_mon_0",
+    "component_reference": "xilinx.com:ip:axi_perf_mon:5.0",
+    "ip_revision": "31",
+    "gen_directory": "../../../../../../finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0",
+    "parameters": {
+      "component_parameters": {
+        "C_HAVE_SAMPLED_METRIC_CNT": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_AXI4LITE_CORE_CLK_ASYNC": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_FIFO_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_FIFO_AXIS_DEPTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "S_AXI_OFFLD_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_LOG_DATA_OFFLD": [ { "value": "Stream", "resolve_type": "user", "usage": "all" } ],
+        "C_S_AXI4_BASEADDR": [ { "value": "0xFFFFFFFF", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_S_AXI4_HIGHADDR": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "C_ENABLE_EVENT_LOG": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT1_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT0_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT2_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT3_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT4_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT5_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT6_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT7_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_REG_ALL_MONITOR_SIGNALS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_7_AXI_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_DATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_6_AXI_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_DATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_5_AXI_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_DATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_4_AXI_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_DATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_3_AXI_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_DATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_FIFO_ENABLE": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_2_AXI_ID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_DATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_ADDR_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_FIFO_ENABLE": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_PROTOCOL": [ { "value": "AXI4", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_1_AXI_ID_WIDTH": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_DATA_WIDTH": [ { "value": "32", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_ADDR_WIDTH": [ { "value": "32", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_FIFO_ENABLE": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TUSER_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TDEST_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TID_WIDTH": [ { "value": "1", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TDATA_WIDTH": [ { "value": "32", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_PROTOCOL": [ { "value": "AXI4", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "C_SLOT_0_AXI_ID_WIDTH": [ { "value": "0", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_DATA_WIDTH": [ { "value": "32", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_ADDR_WIDTH": [ { "value": "32", "value_src": "propagated", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_METRIC_COUNT_SCALE": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_GLOBAL_COUNT_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_NUM_OF_COUNTERS": [ { "value": "3", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_ENABLE_EVENT_COUNT": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_NUM_MONITOR_SLOTS": [ { "value": "2", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "Component_Name": [ { "value": "top_axi_perf_mon_0_0", "resolve_type": "user", "usage": "all" } ],
+        "C_FIFO_AXIS_SYNC": [ { "value": "0", "value_permission": "bd_and_user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXI_IDS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXI_LEN": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXIS_TID": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXIS_TDEST": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXIS_TUSER": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_SUPPORT_ID_REFLECTION": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_S_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "ENABLE_EXT_EVENTS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "ENABLE_EXT_TRIGGERS": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_ENABLE_ADVANCED": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_ENABLE_PROFILE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_ENABLE_TRACE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_WR_ADD_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_FIRST_WRITE_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_LAST_WRITE_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_RESPONSE_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_RD_ADD_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_FIRST_READ_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_LAST_READ_FLAG": [ { "value": "1", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_EXT_EVENTS_FLAG": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_SW_REG_WR_FLAG": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_AXI_DEBUG": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_EN_TRIGGER": [ { "value": "0", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
+        "C_EN_ALL_TRACE": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_LITE_ADDRESS_WIDTH": [ { "value": "16", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "COUNTER_LOAD_VALUE": [ { "value": "0x00000000", "resolve_type": "user", "format": "bitString", "usage": "all" } ]
+      },
+      "model_parameters": {
+        "C_FAMILY": [ { "value": "zynq", "resolve_type": "generated", "usage": "all" } ],
+        "C_INSTANCE": [ { "value": "top_axi_perf_mon_0_0", "resolve_type": "generated", "usage": "all" } ],
+        "C_LITE_ADDRESS_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_ADDR_WIDTH": [ { "value": "16", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI_PROTOCOL": [ { "value": "AXI4LITE", "resolve_type": "generated", "usage": "all" } ],
+        "C_S_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SUPPORT_ID_REFLECTION": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_ENABLE_ADVANCED": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_ENABLE_PROFILE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_ENABLE_TRACE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_AXI_DEBUG": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_TRIGGER": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_WR_ADD_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_FIRST_WRITE_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_LAST_WRITE_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_RESPONSE_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_RD_ADD_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_FIRST_READ_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_LAST_READ_FLAG": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_SW_REG_WR_FLAG": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EN_EXT_EVENTS_FLAG": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_NUM_MONITOR_SLOTS": [ { "value": "2", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_ENABLE_EVENT_COUNT": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_NUM_OF_COUNTERS": [ { "value": "3", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_METRIC_COUNT_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_METRIC_COUNT_SCALE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_GLOBAL_COUNT_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_HAVE_SAMPLED_METRIC_CNT": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_METRICS_SAMPLE_COUNT_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_AXI4LITE_CORE_CLK_ASYNC": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_FIFO_ENABLE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_FIFO_ENABLE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_PROTOCOL": [ { "value": "AXI4", "resolve_type": "generated", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TDATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TDEST_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXIS_TUSER_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_AWLEN": [ { "value": "7", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_0_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_1_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_2_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_3_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_4_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_5_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_6_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SLOT_7_AXI_LOCK": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_REG_ALL_MONITOR_SIGNALS": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT0_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT1_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT2_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT3_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT4_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT5_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT6_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_EXT_EVENT7_FIFO_ENABLE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_ENABLE_EVENT_LOG": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_FIFO_AXIS_DEPTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_FIFO_AXIS_TDATA_WIDTH": [ { "value": "56", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_AXIS_DWIDTH_ROUND_TO_32": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_FIFO_AXIS_TID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_FIFO_AXIS_SYNC": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXI_IDS": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXI_LEN": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXIS_TID": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXIS_TDEST": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_SHOW_AXIS_TUSER": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "ENABLE_EXT_EVENTS": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "COUNTER_LOAD_VALUE": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_LOG_DATA_OFFLD": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "S_AXI_OFFLD_ID_WIDTH": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_S_AXI4_BASEADDR": [ { "value": "0xFFFFFFFF", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_S_AXI4_HIGHADDR": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
+        "C_EN_ALL_TRACE": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:zybo-z7-20:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "31" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "s_axi_aclk": [ { "direction": "in" } ],
+        "s_axi_aresetn": [ { "direction": "in" } ],
+        "s_axi_awaddr": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "s_axi_awvalid": [ { "direction": "in" } ],
+        "s_axi_awready": [ { "direction": "out" } ],
+        "s_axi_wdata": [ { "direction": "in", "size_left": "31", "size_right": "0" } ],
+        "s_axi_wstrb": [ { "direction": "in", "size_left": "3", "size_right": "0" } ],
+        "s_axi_wvalid": [ { "direction": "in" } ],
+        "s_axi_wready": [ { "direction": "out" } ],
+        "s_axi_bresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_bvalid": [ { "direction": "out" } ],
+        "s_axi_bready": [ { "direction": "in" } ],
+        "s_axi_araddr": [ { "direction": "in", "size_left": "15", "size_right": "0" } ],
+        "s_axi_arvalid": [ { "direction": "in" } ],
+        "s_axi_arready": [ { "direction": "out" } ],
+        "s_axi_rdata": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "s_axi_rresp": [ { "direction": "out", "size_left": "1", "size_right": "0" } ],
+        "s_axi_rvalid": [ { "direction": "out" } ],
+        "s_axi_rready": [ { "direction": "in" } ],
+        "slot_0_axi_aclk": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_aresetn": [ { "direction": "in", "driver_value": "1" } ],
+        "slot_0_axi_awaddr": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awlen": [ { "direction": "in", "size_left": "7", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awsize": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awburst": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awcache": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awlock": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_awvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_awready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_wdata": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_wstrb": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_wlast": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_wvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_wready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_bresp": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_bvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_bready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_araddr": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arlen": [ { "direction": "in", "size_left": "7", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arsize": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arburst": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arcache": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arlock": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_arvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_arready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_rdata": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_rresp": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_0_axi_rlast": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_rvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_0_axi_rready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_aclk": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_aresetn": [ { "direction": "in", "driver_value": "1" } ],
+        "slot_1_axi_awaddr": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awlen": [ { "direction": "in", "size_left": "7", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awsize": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awburst": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awcache": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awlock": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_awvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_awready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_wdata": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_wstrb": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_wlast": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_wvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_wready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_bresp": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_bvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_bready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_araddr": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arlen": [ { "direction": "in", "size_left": "7", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arsize": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arburst": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arcache": [ { "direction": "in", "size_left": "3", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arprot": [ { "direction": "in", "size_left": "2", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arlock": [ { "direction": "in", "size_left": "0", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_arvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_arready": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_rdata": [ { "direction": "in", "size_left": "31", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_rresp": [ { "direction": "in", "size_left": "1", "size_right": "0", "driver_value": "0" } ],
+        "slot_1_axi_rlast": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_rvalid": [ { "direction": "in", "driver_value": "0" } ],
+        "slot_1_axi_rready": [ { "direction": "in", "driver_value": "0" } ],
+        "capture_event": [ { "direction": "in", "driver_value": "0" } ],
+        "reset_event": [ { "direction": "in", "driver_value": "0" } ],
+        "core_aclk": [ { "direction": "in" } ],
+        "core_aresetn": [ { "direction": "in" } ],
+        "interrupt": [ { "direction": "out" } ]
+      },
+      "interfaces": {
+        "S_AXI": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "slave",
+          "memory_map_ref": "S_AXI",
+          "parameters": {
+            "DATA_WIDTH": [ { "value": "32", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PROTOCOL": [ { "value": "AXI4LITE", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "16", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "2", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "1", "value_src": "ip_propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "s_axi_araddr" } ],
+            "ARREADY": [ { "physical_name": "s_axi_arready" } ],
+            "ARVALID": [ { "physical_name": "s_axi_arvalid" } ],
+            "AWADDR": [ { "physical_name": "s_axi_awaddr" } ],
+            "AWREADY": [ { "physical_name": "s_axi_awready" } ],
+            "AWVALID": [ { "physical_name": "s_axi_awvalid" } ],
+            "BREADY": [ { "physical_name": "s_axi_bready" } ],
+            "BRESP": [ { "physical_name": "s_axi_bresp" } ],
+            "BVALID": [ { "physical_name": "s_axi_bvalid" } ],
+            "RDATA": [ { "physical_name": "s_axi_rdata" } ],
+            "RREADY": [ { "physical_name": "s_axi_rready" } ],
+            "RRESP": [ { "physical_name": "s_axi_rresp" } ],
+            "RVALID": [ { "physical_name": "s_axi_rvalid" } ],
+            "WDATA": [ { "physical_name": "s_axi_wdata" } ],
+            "WREADY": [ { "physical_name": "s_axi_wready" } ],
+            "WSTRB": [ { "physical_name": "s_axi_wstrb" } ],
+            "WVALID": [ { "physical_name": "s_axi_wvalid" } ]
+          }
+        },
+        "S_AXI_ACLK": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_RESET": [ { "value": "s_axi_aresetn", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "ASSOCIATED_BUSIF": [ { "value": "S_AXI", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "s_axi_aclk" } ]
+          }
+        },
+        "S_AXI_ARESETN": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "s_axi_aresetn" } ]
+          }
+        },
+        "SLOT_0_AXI": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "monitor",
+          "parameters": {
+            "DATA_WIDTH": [ { "value": "32", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PROTOCOL": [ { "value": "AXI4", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "32", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "2", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "16", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "2", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "slot_0_axi_araddr" } ],
+            "ARBURST": [ { "physical_name": "slot_0_axi_arburst" } ],
+            "ARCACHE": [ { "physical_name": "slot_0_axi_arcache" } ],
+            "ARLEN": [ { "physical_name": "slot_0_axi_arlen" } ],
+            "ARLOCK": [ { "physical_name": "slot_0_axi_arlock" } ],
+            "ARPROT": [ { "physical_name": "slot_0_axi_arprot" } ],
+            "ARREADY": [ { "physical_name": "slot_0_axi_arready" } ],
+            "ARSIZE": [ { "physical_name": "slot_0_axi_arsize" } ],
+            "ARVALID": [ { "physical_name": "slot_0_axi_arvalid" } ],
+            "AWADDR": [ { "physical_name": "slot_0_axi_awaddr" } ],
+            "AWBURST": [ { "physical_name": "slot_0_axi_awburst" } ],
+            "AWCACHE": [ { "physical_name": "slot_0_axi_awcache" } ],
+            "AWLEN": [ { "physical_name": "slot_0_axi_awlen" } ],
+            "AWLOCK": [ { "physical_name": "slot_0_axi_awlock" } ],
+            "AWPROT": [ { "physical_name": "slot_0_axi_awprot" } ],
+            "AWREADY": [ { "physical_name": "slot_0_axi_awready" } ],
+            "AWSIZE": [ { "physical_name": "slot_0_axi_awsize" } ],
+            "AWVALID": [ { "physical_name": "slot_0_axi_awvalid" } ],
+            "BREADY": [ { "physical_name": "slot_0_axi_bready" } ],
+            "BRESP": [ { "physical_name": "slot_0_axi_bresp" } ],
+            "BVALID": [ { "physical_name": "slot_0_axi_bvalid" } ],
+            "RDATA": [ { "physical_name": "slot_0_axi_rdata" } ],
+            "RLAST": [ { "physical_name": "slot_0_axi_rlast" } ],
+            "RREADY": [ { "physical_name": "slot_0_axi_rready" } ],
+            "RRESP": [ { "physical_name": "slot_0_axi_rresp" } ],
+            "RVALID": [ { "physical_name": "slot_0_axi_rvalid" } ],
+            "WDATA": [ { "physical_name": "slot_0_axi_wdata" } ],
+            "WLAST": [ { "physical_name": "slot_0_axi_wlast" } ],
+            "WREADY": [ { "physical_name": "slot_0_axi_wready" } ],
+            "WSTRB": [ { "physical_name": "slot_0_axi_wstrb" } ],
+            "WVALID": [ { "physical_name": "slot_0_axi_wvalid" } ]
+          }
+        },
+        "SLOT_1_AXI": {
+          "vlnv": "xilinx.com:interface:aximm:1.0",
+          "abstraction_type": "xilinx.com:interface:aximm_rtl:1.0",
+          "mode": "monitor",
+          "parameters": {
+            "DATA_WIDTH": [ { "value": "32", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PROTOCOL": [ { "value": "AXI4", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ID_WIDTH": [ { "value": "0", "value_src": "auto", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ADDR_WIDTH": [ { "value": "32", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "AWUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "ARUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "BUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "READ_WRITE_MODE": [ { "value": "READ_WRITE", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BURST": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_LOCK": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_PROT": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_CACHE": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_QOS": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_REGION": [ { "value": "0", "value_src": "constant", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_WSTRB": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_BRESP": [ { "value": "1", "value_src": "propagated", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "HAS_RRESP": [ { "value": "1", "value_src": "auto_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "SUPPORTS_NARROW_BURST": [ { "value": "0", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_OUTSTANDING": [ { "value": "16", "value_src": "constant_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_OUTSTANDING": [ { "value": "2", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "MAX_BURST_LENGTH": [ { "value": "2", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_READ_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "NUM_WRITE_THREADS": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "RUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "WUSER_BITS_PER_BYTE": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "ARADDR": [ { "physical_name": "slot_1_axi_araddr" } ],
+            "ARBURST": [ { "physical_name": "slot_1_axi_arburst" } ],
+            "ARCACHE": [ { "physical_name": "slot_1_axi_arcache" } ],
+            "ARLEN": [ { "physical_name": "slot_1_axi_arlen" } ],
+            "ARLOCK": [ { "physical_name": "slot_1_axi_arlock" } ],
+            "ARPROT": [ { "physical_name": "slot_1_axi_arprot" } ],
+            "ARREADY": [ { "physical_name": "slot_1_axi_arready" } ],
+            "ARSIZE": [ { "physical_name": "slot_1_axi_arsize" } ],
+            "ARVALID": [ { "physical_name": "slot_1_axi_arvalid" } ],
+            "AWADDR": [ { "physical_name": "slot_1_axi_awaddr" } ],
+            "AWBURST": [ { "physical_name": "slot_1_axi_awburst" } ],
+            "AWCACHE": [ { "physical_name": "slot_1_axi_awcache" } ],
+            "AWLEN": [ { "physical_name": "slot_1_axi_awlen" } ],
+            "AWLOCK": [ { "physical_name": "slot_1_axi_awlock" } ],
+            "AWPROT": [ { "physical_name": "slot_1_axi_awprot" } ],
+            "AWREADY": [ { "physical_name": "slot_1_axi_awready" } ],
+            "AWSIZE": [ { "physical_name": "slot_1_axi_awsize" } ],
+            "AWVALID": [ { "physical_name": "slot_1_axi_awvalid" } ],
+            "BREADY": [ { "physical_name": "slot_1_axi_bready" } ],
+            "BRESP": [ { "physical_name": "slot_1_axi_bresp" } ],
+            "BVALID": [ { "physical_name": "slot_1_axi_bvalid" } ],
+            "RDATA": [ { "physical_name": "slot_1_axi_rdata" } ],
+            "RLAST": [ { "physical_name": "slot_1_axi_rlast" } ],
+            "RREADY": [ { "physical_name": "slot_1_axi_rready" } ],
+            "RRESP": [ { "physical_name": "slot_1_axi_rresp" } ],
+            "RVALID": [ { "physical_name": "slot_1_axi_rvalid" } ],
+            "WDATA": [ { "physical_name": "slot_1_axi_wdata" } ],
+            "WLAST": [ { "physical_name": "slot_1_axi_wlast" } ],
+            "WREADY": [ { "physical_name": "slot_1_axi_wready" } ],
+            "WSTRB": [ { "physical_name": "slot_1_axi_wstrb" } ],
+            "WVALID": [ { "physical_name": "slot_1_axi_wvalid" } ]
+          }
+        },
+        "slot0_axi_clk": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_BUSIF": [ { "value": "SLOT_0_AXI:SLOT_0_AXI4LITE", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "ASSOCIATED_RESET": [ { "value": "slot_0_axi_aresetn", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "slot_0_axi_aclk" } ]
+          }
+        },
+        "SLOT0_AXI_RST": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "slot_0_axi_aresetn" } ]
+          }
+        },
+        "SLOT1_AXI_CLK": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_BUSIF": [ { "value": "SLOT_1_AXI:SLOT_1_AXI4LITE", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "ASSOCIATED_RESET": [ { "value": "slot_1_axi_aresetn", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "slot_1_axi_aclk" } ]
+          }
+        },
+        "SLOT1_AXI_RST": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "slot_1_axi_aresetn" } ]
+          }
+        },
+        "INTR": {
+          "vlnv": "xilinx.com:signal:interrupt:1.0",
+          "abstraction_type": "xilinx.com:signal:interrupt_rtl:1.0",
+          "mode": "master",
+          "parameters": {
+            "SENSITIVITY": [ { "value": "LEVEL_HIGH", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "PortWidth": [ { "value": "1", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "INTERRUPT": [ { "physical_name": "interrupt" } ]
+          }
+        },
+        "CORE_ACLK": {
+          "vlnv": "xilinx.com:signal:clock:1.0",
+          "abstraction_type": "xilinx.com:signal:clock_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "ASSOCIATED_RESET": [ { "value": "core_aresetn", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "FREQ_HZ": [ { "value": "100000000", "value_src": "user_prop", "value_permission": "bd", "resolve_type": "user", "format": "long", "usage": "all" } ],
+            "FREQ_TOLERANCE_HZ": [ { "value": "0", "value_permission": "bd", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "PHASE": [ { "value": "0.0", "value_permission": "bd", "resolve_type": "generated", "format": "float", "is_ips_inferred": true, "is_static_object": false } ],
+            "CLK_DOMAIN": [ { "value": "top_processing_system7_0_0_FCLK_CLK0", "value_src": "default_prop", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_BUSIF": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "ASSOCIATED_PORT": [ { "value": "", "value_permission": "bd", "resolve_type": "generated", "is_ips_inferred": true, "is_static_object": false } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "CLK": [ { "physical_name": "core_aclk" } ]
+          }
+        },
+        "CORE_ARESETN": {
+          "vlnv": "xilinx.com:signal:reset:1.0",
+          "abstraction_type": "xilinx.com:signal:reset_rtl:1.0",
+          "mode": "slave",
+          "parameters": {
+            "POLARITY": [ { "value": "ACTIVE_LOW", "value_src": "constant", "value_permission": "bd", "usage": "all" } ],
+            "INSERT_VIP": [ { "value": "0", "resolve_type": "user", "format": "long", "usage": "simulation.rtl", "is_ips_inferred": true, "is_static_object": false } ]
+          },
+          "port_maps": {
+            "RST": [ { "physical_name": "core_aresetn" } ]
+          }
+        }
+      },
+      "memory_maps": {
+        "S_AXI": {
+          "display_name": "S_AXI",
+          "description": "Memory Map for S_AXI",
+          "address_blocks": {
+            "Reg": {
+              "base_address": "0",
+              "range": "65536",
+              "display_name": "Reg",
+              "description": "Register Block",
+              "usage": "register",
+              "access": "read-write",
+              "registers": {
+                "Global_Clock_Counter_MSB": {
+                  "address_offset": "0x0000",
+                  "size": 32,
+                  "display_name": "Global Clock Counter MSB",
+                  "description": "Higher 32-bit data of the Global Clock Counter Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Global_Clock_Count": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Global Clock Count",
+                      "description": "Higher 32-bit data of the Global Clock Counter Register\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Global_Clock_Counter_LSB": {
+                  "address_offset": "0x0004",
+                  "size": 32,
+                  "display_name": "Global Clock Counter LSB",
+                  "description": "Lower 32-bit data of the Global Clock Counter Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Global_Clock_Count": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Global Clock Count",
+                      "description": "Lower 32-bit data of the Global Clock Counter Register\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Sample_Interval": {
+                  "address_offset": "0x0024",
+                  "size": 32,
+                  "display_name": "Sample Interval",
+                  "description": "Sample Interval Time Configuration Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sample_Interval": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sample Interval",
+                      "description": "Sample Interval Register\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Sample_Interval_Control_Register": {
+                  "address_offset": "0x0028",
+                  "size": 32,
+                  "display_name": "Sample Interval Control Register",
+                  "description": "Sample Interval Control Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x100",
+                  "fields": {
+                    "Enable": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Enable",
+                      "description": "1 - Enables the down counter.\nBefore enabling, the counter should be loaded with the sample Interval Register value.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Load": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Load",
+                      "description": "1 - Loads the Sample Interval register value into the Sample Interval Counter.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counters_Reset": {
+                      "bit_offset": 8,
+                      "bit_width": 1,
+                      "display_name": "Metric Counters Reset",
+                      "description": "1 - Resets metric counters when sample interval timer expires or when the sample register is read.\n0 - Metric Counters are not reset when sample interval counter lapses or when the sample register is read.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Sample_Register": {
+                  "address_offset": "0x002C",
+                  "size": 32,
+                  "display_name": "Sample Register",
+                  "description": "Sample Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sample_Register_Read": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sample Register Read",
+                      "description": "Free running counter values\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Global_Interrupt_Enable_Register": {
+                  "address_offset": "0x0030",
+                  "size": 32,
+                  "display_name": "Global Interrupt Enable Register",
+                  "description": "Global Interrupt Enable Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "GIE": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "GIE",
+                      "description": "Master enable for the device interrupt output to the system interrupt controller.   1 - Enabled   0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Interrupt_Enable_Register": {
+                  "address_offset": "0x0034",
+                  "size": 32,
+                  "display_name": "Interrupt Enable Register",
+                  "description": "Interrupt Enable Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "GCC_Overflow_Interrupt_Enable": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Global Clock Counter Overflow Interrupt Enable",
+                      "description": "Global Clock Counter Overflow Interrupt. Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "SIC_Overflow_Interrupt_Enable": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Sample Interval Counter Overflow Interrupt Enable",
+                      "description": "Valid only in advanced and profile mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "ELF_Overflow_Interrupt_Enable": {
+                      "bit_offset": 2,
+                      "bit_width": 1,
+                      "display_name": "Event Log FIFO Overflow Interrupt Enable",
+                      "description": "Event Log FIFO Overflow Interrupt. Valid only in advanced mode (when event logging is enabled) and trace modes.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_0_Overflow_Interrupt_Enable": {
+                      "bit_offset": 3,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 0 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_1_Overflow_Interrupt_Enable": {
+                      "bit_offset": 4,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 1 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_2_Overflow_Interrupt_Enable": {
+                      "bit_offset": 5,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 2 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_3_Overflow_Interrupt_Enable": {
+                      "bit_offset": 6,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 3 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_4_Overflow_Interrupt_Enable": {
+                      "bit_offset": 7,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 4 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_5_Overflow_Interrupt_Enable": {
+                      "bit_offset": 8,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 5 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_6_Overflow_Interrupt_Enable": {
+                      "bit_offset": 9,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 6 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_7_Overflow_Interrupt_Enable": {
+                      "bit_offset": 10,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 7 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_8_Overflow_Interrupt_Enable": {
+                      "bit_offset": 11,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 8 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_9_Overflow_Interrupt_Enable": {
+                      "bit_offset": 12,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 9 Overflow Interrupt Enable",
+                      "description": "Valid only in advanced mode.\n  1 - Enabled\n  0 - Disabled\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Interrupt_Status_Register": {
+                  "address_offset": "0x0038",
+                  "size": 32,
+                  "display_name": "Interrupt_Status_Register",
+                  "description": "Interrupt_Status_Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "GCC_Overflow_Interrupt": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Global Clock Counter Overflow Interrupt",
+                      "description": "Global Clock Counter Overflow Interrupt. Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "SIC_Overflow_Interrupt": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Sample Interval Counter Overflow Interrupt",
+                      "description": "Valid only in advanced and profile mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "ELF_Overflow_Interrupt": {
+                      "bit_offset": 2,
+                      "bit_width": 1,
+                      "display_name": "Event Log FIFO Overflow Interrupt",
+                      "description": "Event Log FIFO Overflow Interrupt. Valid only in advanced mode (when event logging is enabled) and trace modes.   1 - Active   0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_0_Overflow_Interrupt": {
+                      "bit_offset": 3,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 0 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_1_Overflow_Interrupt": {
+                      "bit_offset": 4,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 1 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_2_Overflow_Interrupt": {
+                      "bit_offset": 5,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 2 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_3_Overflow_Interrupt": {
+                      "bit_offset": 6,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 3 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_4_Overflow_Interrupt": {
+                      "bit_offset": 7,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 4 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_5_Overflow_Interrupt": {
+                      "bit_offset": 8,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 5 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_6_Overflow_Interrupt": {
+                      "bit_offset": 9,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 6 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_7_Overflow_Interrupt": {
+                      "bit_offset": 10,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 7 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_8_Overflow_Interrupt": {
+                      "bit_offset": 11,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 8 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_9_Overflow_Interrupt": {
+                      "bit_offset": 12,
+                      "bit_width": 1,
+                      "display_name": "Metric Counter 9 Overflow Interrupt",
+                      "description": "Valid only in advanced mode.\n  1 - Active\n  0 - Not Active\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Metric_Selector_Register_0": {
+                  "address_offset": "0x0044",
+                  "size": 32,
+                  "display_name": "Metric Selector Register 0",
+                  "description": "Metric Selector for Metric Counters 0, 1, 2 and 3",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metric_Selector_for_Counter_0": {
+                      "bit_offset": 0,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 0",
+                      "description": "Selects the kind of metrics computed by Counter 0.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_0_Slot_ID": {
+                      "bit_offset": 5,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 0 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter0\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_1": {
+                      "bit_offset": 8,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 1",
+                      "description": "Selects the kind of metrics computed by Counter 1.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_1_Slot_ID": {
+                      "bit_offset": 13,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 1 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter1\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_2": {
+                      "bit_offset": 16,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 2",
+                      "description": "Selects the kind of metrics computed by Counter 2.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_2_Slot_ID": {
+                      "bit_offset": 21,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 2 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter2\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_3": {
+                      "bit_offset": 24,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 3",
+                      "description": "Selects the kind of metrics computed by Counter 3.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_3_Slot_ID": {
+                      "bit_offset": 29,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 3 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter3\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Metric_Selector_Register_1": {
+                  "address_offset": "0x0048",
+                  "size": 32,
+                  "display_name": "Metric Selector Register 1",
+                  "description": "Metric Selector for Metric Counters 4, 5, 6 and 7",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metric_Selector_for_Counter_4": {
+                      "bit_offset": 0,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 4",
+                      "description": "Selects the kind of metrics computed by Counter 4.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_4_Slot_ID": {
+                      "bit_offset": 5,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 4 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter4\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_5": {
+                      "bit_offset": 8,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 5",
+                      "description": "Selects the kind of metrics computed by Counter 5.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_5_Slot_ID": {
+                      "bit_offset": 13,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 5 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter5\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_6": {
+                      "bit_offset": 16,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 6",
+                      "description": "Selects the kind of metrics computed by Counter 6.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_6_Slot_ID": {
+                      "bit_offset": 21,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 6 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter6\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_7": {
+                      "bit_offset": 24,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 7",
+                      "description": "Selects the kind of metrics computed by Counter 7.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_7_Slot_ID": {
+                      "bit_offset": 29,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 7 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter7\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Metric_Selector_Register_2": {
+                  "address_offset": "0x004C",
+                  "size": 32,
+                  "display_name": "Metric Selector Register 2",
+                  "description": "Metric Selector for Metric Counters 8 and 9",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metric_Selector_for_Counter_8": {
+                      "bit_offset": 0,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 8",
+                      "description": "Selects the kind of metrics computed by Counter 8.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_8_Slot_ID": {
+                      "bit_offset": 5,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 8 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter8\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Selector_for_Counter_9": {
+                      "bit_offset": 8,
+                      "bit_width": 5,
+                      "display_name": "Metric Selector for Counter 9",
+                      "description": "Selects the kind of metrics computed by Counter 9.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metric_Counter_9_Slot_ID": {
+                      "bit_offset": 13,
+                      "bit_width": 3,
+                      "display_name": "Metric Counter 9 Slot ID",
+                      "description": "Selects the Slot for the metric computed by Counter9\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Metric_Counter_0": {
+                  "address_offset": "0x0100",
+                  "size": 32,
+                  "display_name": "Metric Counter 0",
+                  "description": "Metric Counter 0 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metric_Counter": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Metric Counter (Accumulator)",
+                      "description": "Contains the accumulated value of the event selected\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Incrementer_0": {
+                  "address_offset": "0x0104",
+                  "size": 32,
+                  "display_name": "Incrementer 0",
+                  "description": "Incrementer 0 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Incrementer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Incrementer",
+                      "description": "Contains the value of the Incrementer\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Range_Register_0": {
+                  "address_offset": "0x0108",
+                  "size": 32,
+                  "display_name": "Range Register 0",
+                  "description": "Low & High Ranges for Incrementer 0",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Range_LOW": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Range LOW",
+                      "description": "Contains the LOWER limit of a range\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Range_HIGH": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Range HIGH",
+                      "description": "Contains the HIGHER limit of a range\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Metric_Counter_1": {
+                  "address_offset": "0x0110",
+                  "size": 32,
+                  "display_name": "Metric Counter 1",
+                  "description": "Metric Counter 1 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metric_Counter": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Metric Counter (Accumulator)",
+                      "description": "Contains the accumulated value of the event selected\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Incrementer_1": {
+                  "address_offset": "0x0114",
+                  "size": 32,
+                  "display_name": "Incrementer 1",
+                  "description": "Incrementer 1 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Incrementer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Incrementer",
+                      "description": "Contains the value of the Incrementer\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Range_Register_1": {
+                  "address_offset": "0x0118",
+                  "size": 32,
+                  "display_name": "Range Register 1",
+                  "description": "Low & High Ranges for Incrementer 1",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Range_LOW": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Range LOW",
+                      "description": "Contains the LOWER limit of a range\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Range_HIGH": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Range HIGH",
+                      "description": "Contains the HIGHER limit of a range\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Metric_Counter_2": {
+                  "address_offset": "0x0120",
+                  "size": 32,
+                  "display_name": "Metric Counter 2",
+                  "description": "Metric Counter 2 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metric_Counter": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Metric Counter (Accumulator)",
+                      "description": "Contains the accumulated value of the event selected\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Incrementer_2": {
+                  "address_offset": "0x0124",
+                  "size": 32,
+                  "display_name": "Incrementer 2",
+                  "description": "Incrementer 2 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Incrementer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Incrementer",
+                      "description": "Contains the value of the Incrementer\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Range_Register_2": {
+                  "address_offset": "0x0128",
+                  "size": 32,
+                  "display_name": "Range Register 2",
+                  "description": "Low & High Ranges for Incrementer 2",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Range_LOW": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Range LOW",
+                      "description": "Contains the LOWER limit of a range\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Range_HIGH": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Range HIGH",
+                      "description": "Contains the HIGHER limit of a range\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Sampled_Metric_Counter_0": {
+                  "address_offset": "0x0200",
+                  "size": 32,
+                  "display_name": "Sampled Metric Counter 0",
+                  "description": "Sampled Metric Counter 0 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sampled_Metric_Counter": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sampled Metric Counter (Accumulator)",
+                      "description": "Contains the sampled Metric Counter value\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Sampled_Incrementer_0": {
+                  "address_offset": "0x0204",
+                  "size": 32,
+                  "display_name": "Sampled Incrementer 0",
+                  "description": "Sampled Incrementer 0 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sampled_Incrementer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sampled Incrementer",
+                      "description": "Contains the sampled Incrementer value\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Sampled_Metric_Counter_1": {
+                  "address_offset": "0x0210",
+                  "size": 32,
+                  "display_name": "Sampled Metric Counter 1",
+                  "description": "Sampled Metric Counter 1 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sampled_Metric_Counter": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sampled Metric Counter (Accumulator)",
+                      "description": "Contains the sampled Metric Counter value\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Sampled_Incrementer_1": {
+                  "address_offset": "0x0214",
+                  "size": 32,
+                  "display_name": "Sampled Incrementer 1",
+                  "description": "Sampled Incrementer 1 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sampled_Incrementer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sampled Incrementer",
+                      "description": "Contains the sampled Incrementer value\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Sampled_Metric_Counter_2": {
+                  "address_offset": "0x0220",
+                  "size": 32,
+                  "display_name": "Sampled Metric Counter 2",
+                  "description": "Sampled Metric Counter 2 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sampled_Metric_Counter": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sampled Metric Counter (Accumulator)",
+                      "description": "Contains the sampled Metric Counter value\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Sampled_Incrementer_2": {
+                  "address_offset": "0x0224",
+                  "size": 32,
+                  "display_name": "Sampled Incrementer 2",
+                  "description": "Sampled Incrementer 2 Register",
+                  "is_volatile": true,
+                  "access": "read-only",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Sampled_Incrementer": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Sampled Incrementer",
+                      "description": "Contains the sampled Incrementer value\n",
+                      "is_volatile": true,
+                      "access": "read-only"
+                    }
+                  }
+                },
+                "Control_Register": {
+                  "address_offset": "0x0300",
+                  "size": 32,
+                  "display_name": "Control Register",
+                  "description": "Control Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Metrics_Cnt_EN": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Metrics_Cnt_EN",
+                      "description": "1 - Enables all metric counters in the monitor\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Metrics_Cnt_Reset": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Metrics_Cnt_Reset",
+                      "description": "1 - Resets all metric counters and sampled metric counters in the monitor\nNote: De-assertion of metric reset (asserted though Control register) takes five clock cycles by core.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Use_Ext_Trig": {
+                      "bit_offset": 2,
+                      "bit_width": 1,
+                      "display_name": "Use_Ext_Trig",
+                      "description": "1 - Uses the external trigger to start the metric counters\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_ID_Based_Filtering_Masking": {
+                      "bit_offset": 3,
+                      "bit_width": 1,
+                      "display_name": "Enable_ID_Based_Filtering_Masking",
+                      "description": "This bit is only valid in Advanced mode.   0 - Ignore ID for metric calculation   1 - Enables ID filtering and masking.  When enabled, all metric corresponds to the ID configured in the IDR and IDMR registers.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Write_Latency_Start_Point": {
+                      "bit_offset": 4,
+                      "bit_width": 1,
+                      "display_name": "Write_Latency_Start_Point",
+                      "description": "0 - Enables address issuance by master interface as write latency start point (AWVALID)\n1 - Enables address acceptance by the slave interface as write latency start point (AWVALID and AWREADY)\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Write_Latency_End_Point": {
+                      "bit_offset": 5,
+                      "bit_width": 1,
+                      "display_name": "Write_Latency_End_Point",
+                      "description": "1 - Enables first write as write latency end point\n0 - Enables Last write as write latency end point\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Read_Latency_Start_Point": {
+                      "bit_offset": 6,
+                      "bit_width": 1,
+                      "display_name": "Read_Latency_Start_Point",
+                      "description": "0 - Enables address issuance by the master interface as read latency start point (ARVALID)\n1 - Enables address acceptance by slave as read latency start\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Read_Latency_End_Point": {
+                      "bit_offset": 7,
+                      "bit_width": 1,
+                      "display_name": "Read_Latency_End_Point",
+                      "description": "1 - Enables first read as read latency end point\n0 - Enables last read as read latency end point\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Event_Log": {
+                      "bit_offset": 8,
+                      "bit_width": 1,
+                      "display_name": "Enable_Event_Log",
+                      "description": "1 - Enables event logging\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Use_Ext_Trig_Log": {
+                      "bit_offset": 9,
+                      "bit_width": 1,
+                      "display_name": "Use_Ext_Trig_Log",
+                      "description": "1 - Uses the external trigger to start the event log\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Global_Clk_Cnt_En": {
+                      "bit_offset": 16,
+                      "bit_width": 1,
+                      "display_name": "Global_Clk_Cnt_En",
+                      "description": "1 - Enables the free-running Global Clock Counter. Advanced mode only.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Global_Clk_Cnt_Reset": {
+                      "bit_offset": 17,
+                      "bit_width": 1,
+                      "display_name": "Global_Clk_Cnt_Reset",
+                      "description": "1 - Resets the free-running Global Clock Counter. Advanced mode only.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Streaming_FIFO_Reset": {
+                      "bit_offset": 25,
+                      "bit_width": 1,
+                      "display_name": "Streaming_FIFO_Reset",
+                      "description": "1 - Resets the streaming FIFO When the trigger parameter (C_EN_TRIGGER) is asserted, the same bit is also used to reset the complete trigger path logic.\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "ID_Register": {
+                  "address_offset": "0x0304",
+                  "size": 32,
+                  "display_name": "ID Register",
+                  "description": "ID Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "WID": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Write ID",
+                      "description": "Write ID to Filter/Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "RID": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Read ID",
+                      "description": "Read ID to Filter/Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "ID_Mask_Register": {
+                  "address_offset": "0x0308",
+                  "size": 32,
+                  "display_name": "ID Mask Register",
+                  "description": "ID Mask Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "WID": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Write ID to Mask",
+                      "description": "Write ID to Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "RID": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Read ID to Mask",
+                      "description": "Read ID to Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "ID_Register_2": {
+                  "address_offset": "0x030C",
+                  "size": 32,
+                  "display_name": "ID Register 2",
+                  "description": "ID Register 2",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "WID": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Write ID",
+                      "description": "Write ID to Filter/Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "RID": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Read ID",
+                      "description": "Read ID to Filter/Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "ID_Mask_Register_2": {
+                  "address_offset": "0x0310",
+                  "size": 32,
+                  "display_name": "ID Mask Register 2",
+                  "description": "ID Mask Register 2",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "WID": {
+                      "bit_offset": 0,
+                      "bit_width": 16,
+                      "display_name": "Write ID to Mask",
+                      "description": "Write ID to Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "RID": {
+                      "bit_offset": 16,
+                      "bit_width": 16,
+                      "display_name": "Read ID to Mask",
+                      "description": "Read ID to Mask\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Flag_Enable_Register": {
+                  "address_offset": "0x0400",
+                  "size": 32,
+                  "display_name": "Flag Enable Register",
+                  "description": "Flag Enable Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Enable_Write_Addr_Flag": {
+                      "bit_offset": 0,
+                      "bit_width": 1,
+                      "display_name": "Enable_Write_Addr_Flag",
+                      "description": "1 - Enables event logging on write address latch\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_First_Write_Flag": {
+                      "bit_offset": 1,
+                      "bit_width": 1,
+                      "display_name": "Enable_First_Write_Flag",
+                      "description": "1 - Enables event logging on first write of a transaction\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Last_Write_Flag": {
+                      "bit_offset": 2,
+                      "bit_width": 1,
+                      "display_name": "Enable_Last_Write_Flag",
+                      "description": "1 - Enables event logging on last write of a transaction\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Response_Flag": {
+                      "bit_offset": 3,
+                      "bit_width": 1,
+                      "display_name": "Enable_Response_Flag",
+                      "description": "1 - Enables event logging on response of a transaction\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Read_Addr_Flag": {
+                      "bit_offset": 4,
+                      "bit_width": 1,
+                      "display_name": "Enable_Read_Addr_Flag",
+                      "description": "1 - Enables event logging on read address latch\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_First_Read_Flag": {
+                      "bit_offset": 5,
+                      "bit_width": 1,
+                      "display_name": "Enable_First_Read_Flag",
+                      "description": "1 - Enables event logging on first read of a transaction\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Last_Read_Flag": {
+                      "bit_offset": 6,
+                      "bit_width": 1,
+                      "display_name": "Enable_Last_Read_Flag",
+                      "description": "1 - Enables event logging on last read of a transaction\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Software_Written_Data_Flag": {
+                      "bit_offset": 16,
+                      "bit_width": 1,
+                      "display_name": "Enable_Software_Written_Data_Flag",
+                      "description": "1 - Enables event logging on write to Software-written data register\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_External_Event_Flag": {
+                      "bit_offset": 17,
+                      "bit_width": 1,
+                      "display_name": "Enable_External_Event_Flag",
+                      "description": "1 - Enables event logging on Event signal\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_External_Event_Stop_Flag": {
+                      "bit_offset": 18,
+                      "bit_width": 1,
+                      "display_name": "Enable_External_Event_Stop_Flag",
+                      "description": "1 - Enables event logging on Event stop signal\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_External_Event_Start_Flag": {
+                      "bit_offset": 19,
+                      "bit_width": 1,
+                      "display_name": "Enable_External_Event_Start_Flag",
+                      "description": "1 - Enables event logging on Event start signal\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Global_Clock_Count_Overflow_Flag": {
+                      "bit_offset": 20,
+                      "bit_width": 1,
+                      "display_name": "Enable_Global_Clock_Count_Overflow_Flag",
+                      "description": "1 - Enables event logging on global clock counter overflow\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Sample_Counter_Lapse_Flag": {
+                      "bit_offset": 21,
+                      "bit_width": 1,
+                      "display_name": "Enable_Sample_Counter_Lapse_Flag",
+                      "description": "1 - Enables event logging on sample counter lapse\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_0_Flag": {
+                      "bit_offset": 22,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_0_Flag",
+                      "description": "1 - Enables event logging on metric counter 0 value crossing the count given in cut off register 0\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_1_Flag": {
+                      "bit_offset": 23,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_1_Flag",
+                      "description": "1 - Enables event logging on metric counter 1 value crossing the count given in cut off register 1\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_2_Flag": {
+                      "bit_offset": 24,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_2_Flag",
+                      "description": "1 - Enables event logging on metric counter 2 value crossing the count given in cut off register 2\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_3_Flag": {
+                      "bit_offset": 25,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_3_Flag",
+                      "description": "1 - Enables event logging on metric counter 3 value crossing the count given in cut off register 3\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_4_Flag": {
+                      "bit_offset": 26,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_4_Flag",
+                      "description": "1 - Enables event logging on metric counter 4 value crossing the count given in cut off register 4\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_5_Flag": {
+                      "bit_offset": 27,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_5_Flag",
+                      "description": "1 - Enables event logging on metric counter 5 value crossing the count given in cut off register 5\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_6_Flag": {
+                      "bit_offset": 28,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_6_Flag",
+                      "description": "1 - Enables event logging on metric counter 6 value crossing the count given in cut off register 6\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_7_Flag": {
+                      "bit_offset": 29,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_7_Flag",
+                      "description": "1 - Enables event logging on metric counter 7 value crossing the count given in cut off register 7\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_8_Flag": {
+                      "bit_offset": 30,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_8_Flag",
+                      "description": "1 - Enables event logging on metric counter 8 value crossing the count given in cut off register 8\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    },
+                    "Enable_Metric_Counter_9_Flag": {
+                      "bit_offset": 31,
+                      "bit_width": 1,
+                      "display_name": "Enable_Metric_Counter_9_Flag",
+                      "description": "1 - Enables event logging on metric counter 9 value crossing the count given in cut off register 9\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                },
+                "Software_Written_Data_Register": {
+                  "address_offset": "0x0404",
+                  "size": 32,
+                  "display_name": "Software_Written_Data_Register",
+                  "description": "Software_Written_Data_Register",
+                  "is_volatile": true,
+                  "access": "read-write",
+                  "reset_value": "0x0",
+                  "fields": {
+                    "Software_Written_Data": {
+                      "bit_offset": 0,
+                      "bit_width": 32,
+                      "display_name": "Software_Written_Data",
+                      "description": "Software Written Data\n",
+                      "is_volatile": true,
+                      "access": "read-write"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

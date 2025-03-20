@@ -1,0 +1,892 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Mar 20 20:18:30 2025
+# Process ID: 241042
+# Current directory: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1
+# Command line: vivado -log top_axi_perf_mon_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_axi_perf_mon_0_0.tcl
+# Log file: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/top_axi_perf_mon_0_0.vds
+# Journal file: /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/vivado.jou
+# Running On: DESKTOP-B66BQ5K, OS: Linux, CPU Frequency: 3494.400 MHz, CPU Physical cores: 10, Host memory: 16658 MB
+#-----------------------------------------------------------
+source top_axi_perf_mon_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1356.750 ; gain = 21.836 ; free physical = 2223 ; free virtual = 7801
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_0_IODMA_hls_0_tgu7ix59/project_StreamingDataflowPartition_0_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/Documents/VIVADO/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_i5tk9j7c/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_0_14x995nz/project_StreamingDataflowPartition_1_MVAU_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_1_50lritfa/project_StreamingDataflowPartition_1_MVAU_hls_1/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_MVAU_hls_2_02djbpo7/project_StreamingDataflowPartition_1_MVAU_hls_2/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_1_LabelSelect_hls_0_x6g5_c6q/project_StreamingDataflowPartition_1_LabelSelect_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_x9l2zrw8/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/lsh/FPGA/finn/finn-rtllib/memstream'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/code_gen_ipgen_StreamingDataflowPartition_2_IODMA_hls_0_tuypk1du/project_StreamingDataflowPartition_2_IODMA_hls_0/sol1/impl/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tmp/finn_dev_lsh/vivado_stitch_proj_74e2cunt/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: top_axi_perf_mon_0_0
+Command: synth_design -top top_axi_perf_mon_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 241164
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2141.809 ; gain = 410.746 ; free physical = 1010 ; free virtual = 2253
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'fifo_full', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1887]
+INFO: [Synth 8-11241] undeclared symbol 'wr_rst_busy', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1888]
+INFO: [Synth 8-11241] undeclared symbol 'Response_Flag', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4002]
+INFO: [Synth 8-11241] undeclared symbol 'Last_Read_Flag', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4018]
+INFO: [Synth 8-11241] undeclared symbol 'F1_Empty', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9081]
+INFO: [Synth 8-11241] undeclared symbol 'F2_Empty', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9106]
+INFO: [Synth 8-11241] undeclared symbol 'F3_Empty', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9236]
+INFO: [Synth 8-11241] undeclared symbol 'F4_Empty', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9275]
+INFO: [Synth 8-11241] undeclared symbol 'FBC_Rd_En', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10113]
+INFO: [Synth 8-11241] undeclared symbol 'FWL_Rd_En', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10183]
+INFO: [Synth 8-11241] undeclared symbol 'FSWI_Rd_En', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10259]
+INFO: [Synth 8-11241] undeclared symbol 'Global_Clk_Cnt_Ovf_En', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14637]
+INFO: [Synth 8-11241] undeclared symbol 'Sample_Metric_Cnt_Ovf_En', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14638]
+INFO: [Synth 8-11241] undeclared symbol 'Lat_Sample_Reg', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14643]
+INFO: [Synth 8-11241] undeclared symbol 'Wr_Lat_Start', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14646]
+INFO: [Synth 8-11241] undeclared symbol 'Wr_Lat_End', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14647]
+INFO: [Synth 8-11241] undeclared symbol 'Rd_Lat_Start', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14648]
+INFO: [Synth 8-11241] undeclared symbol 'Rd_Lat_End', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14649]
+INFO: [Synth 8-11241] undeclared symbol 'stream_fifo_rst_n', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:15104]
+INFO: [Synth 8-11241] undeclared symbol 'stream_fifo_rst_n', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:15330]
+INFO: [Synth 8-11241] undeclared symbol 'stream_fifo_rst_n', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:15557]
+INFO: [Synth 8-11241] undeclared symbol 'stream_fifo_rst_n', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:15782]
+INFO: [Synth 8-11241] undeclared symbol 'stream_fifo_rst_n', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:16009]
+INFO: [Synth 8-11241] undeclared symbol 'stream_fifo_rst_n', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:16235]
+INFO: [Synth 8-11241] undeclared symbol 'External_Event7_Cnt_En', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:16578]
+INFO: [Synth 8-11241] undeclared symbol 'Wr_Lat_Start', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:18329]
+INFO: [Synth 8-11241] undeclared symbol 'Wr_Lat_End', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:18330]
+INFO: [Synth 8-11241] undeclared symbol 'Rd_Lat_Start', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:18331]
+INFO: [Synth 8-11241] undeclared symbol 'Rd_Lat_End', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:18332]
+INFO: [Synth 8-11241] undeclared symbol 'Overflow', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:20513]
+INFO: [Synth 8-11241] undeclared symbol 'Metrics_Cnt_En_Out', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:21978]
+INFO: [Synth 8-11241] undeclared symbol 'F3_Empty', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:22455]
+INFO: [Synth 8-11241] undeclared symbol 'F4_Empty', assumed default net type 'wire' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:22493]
+INFO: [Synth 8-6157] synthesizing module 'top_axi_perf_mon_0_0' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/synth/top_axi_perf_mon_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_top' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:24348]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_advanced' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13045]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_mon_fifo' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4450]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:152]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_mon_fifo' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4450]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_mon_fifo__parameterized0' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4450]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_async_fifo' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:647]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2158]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1892]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1214]
+INFO: [Synth 8-226] default block is never used [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1281]
+INFO: [Synth 8-226] default block is never used [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1303]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1914]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1914]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1626]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1626]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1866]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2158]
+WARNING: [Synth 8-7071] port 'wr_ack' of module 'xpm_fifo_async' is unconnected for instance 'inst' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1212]
+WARNING: [Synth 8-7071] port 'data_valid' of module 'xpm_fifo_async' is unconnected for instance 'inst' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1212]
+WARNING: [Synth 8-7023] instance 'inst' of module 'xpm_fifo_async' has 26 connections declared, but only 24 given [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1212]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_async_fifo' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:647]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_mon_fifo__parameterized0' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4450]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_ext_calc' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4660]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_ext_calc' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4660]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_metric_calc' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:8385]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized0' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized0' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized1' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized1' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_counter_ovf' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:3043]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_counter_ovf' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:3043]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized2' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized2' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized3' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_sync_fifo__parameterized3' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1310]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_metric_calc' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:8385]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_samp_intl_cnt' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:7294]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_counter' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:2890]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_counter' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:2890]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_samp_intl_cnt' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:7294]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_axi_interface' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:2491]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_axi_interface' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:2491]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_register_module' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4821]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync__parameterized0' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync__parameterized0' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync__parameterized1' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync__parameterized1' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_register_module' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4821]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_interrupt_module' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4290]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_interrupt_module' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4290]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync__parameterized2' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_cdc_sync__parameterized2' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:65]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_glbl_clk_cnt' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4173]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_glbl_clk_cnt' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4173]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_metric_counters' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10450]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_metric_sel_n_cnt' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:12422]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_acc_n_incr' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_acc_n_incr' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:1468]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_metric_sel_n_cnt' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:12422]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_metric_counters' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10450]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_samp_metrics_data' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:7416]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_samp_metrics_data' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:7416]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_advanced' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13045]
+INFO: [Synth 8-6157] synthesizing module 'axi_perf_mon_v5_0_31_dff_async_reset' [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:563]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_dff_async_reset' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:563]
+INFO: [Synth 8-6155] done synthesizing module 'axi_perf_mon_v5_0_31_top' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:24348]
+INFO: [Synth 8-6155] done synthesizing module 'top_axi_perf_mon_0_0' (0#1) [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/synth/top_axi_perf_mon_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element Reg_Data_In_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4518]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3069]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1398]
+WARNING: [Synth 8-6014] Unused sequential element Reg_Data_In_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:4518]
+WARNING: [Synth 8-6014] Unused sequential element First_Write_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9012]
+WARNING: [Synth 8-6014] Unused sequential element AWID_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9017]
+WARNING: [Synth 8-6014] Unused sequential element Write_Beat_d2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9148]
+WARNING: [Synth 8-6014] Unused sequential element Write_Beat_d3_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9149]
+WARNING: [Synth 8-6014] Unused sequential element Write_Beat_d4_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9150]
+WARNING: [Synth 8-6014] Unused sequential element Write_Beat_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9151]
+WARNING: [Synth 8-6014] Unused sequential element Wr_Idle_d1_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9152]
+WARNING: [Synth 8-6014] Unused sequential element Wr_Idle_d2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9153]
+WARNING: [Synth 8-6014] Unused sequential element Wr_Idle_d3_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9154]
+WARNING: [Synth 8-6014] Unused sequential element Wr_Idle_d4_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9155]
+WARNING: [Synth 8-6014] Unused sequential element Wr_Idle_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9156]
+WARNING: [Synth 8-6014] Unused sequential element Last_Write_d2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9158]
+WARNING: [Synth 8-6014] Unused sequential element Last_Write_d3_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9159]
+WARNING: [Synth 8-6014] Unused sequential element Last_Write_d4_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9160]
+WARNING: [Synth 8-6014] Unused sequential element Last_Write_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9161]
+WARNING: [Synth 8-6014] Unused sequential element Last_Write_cnt2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9162]
+WARNING: [Synth 8-6014] Unused sequential element wr_byte_cnt_d2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9164]
+WARNING: [Synth 8-6014] Unused sequential element wr_byte_cnt_d3_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9165]
+WARNING: [Synth 8-6014] Unused sequential element wr_byte_cnt_d4_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9166]
+WARNING: [Synth 8-6014] Unused sequential element wr_byte_cnt_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9167]
+WARNING: [Synth 8-6014] Unused sequential element awid_match_d2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9211]
+WARNING: [Synth 8-6014] Unused sequential element Wr_Valid_Issue_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9469]
+WARNING: [Synth 8-6014] Unused sequential element No_Write_Ready_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9470]
+WARNING: [Synth 8-6014] Unused sequential element Rd_Latency_Fifo_Rd_En_D2_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9815]
+WARNING: [Synth 8-6014] Unused sequential element S_Packet_Cnt_En_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10362]
+WARNING: [Synth 8-6014] Unused sequential element S_Slv_Idle_Cnt_En_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10363]
+WARNING: [Synth 8-6014] Unused sequential element S_Mst_Idle_Cnt_En_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10364]
+WARNING: [Synth 8-6014] Unused sequential element S_Position_Byte_Cnt_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10366]
+WARNING: [Synth 8-6014] Unused sequential element Last_Read_reg_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:9015]
+WARNING: [Synth 8-6014] Unused sequential element Slv_Wr_Idle_Fifo_Wr_en_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:10233]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x3_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6742]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x4_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6743]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x5_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6744]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x6_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6745]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x7_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6746]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x8_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6747]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_7downto4_is_0x9_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6748]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Addr_3downto0_is_0x0_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6750]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Metric_Sel_Reg_1_Rd_En_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6766]
+WARNING: [Synth 8-6014] Unused sequential element Lat_Metric_Sel_Reg_2_Rd_En_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:6767]
+WARNING: [Synth 8-6014] Unused sequential element trigger_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14883]
+WARNING: [Synth 8-6014] Unused sequential element trigger1_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14884]
+WARNING: [Synth 8-6014] Unused sequential element Streaming_Fifo_Full_D1_reg was removed.  [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:16752]
+WARNING: [Synth 8-3848] Net s_axi_offld_arready in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13753]
+WARNING: [Synth 8-3848] Net s_axi_offld_rdata in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13755]
+WARNING: [Synth 8-3848] Net s_axi_offld_rresp in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13756]
+WARNING: [Synth 8-3848] Net s_axi_offld_rvalid in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13757]
+WARNING: [Synth 8-3848] Net s_axi_offld_rid in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13758]
+WARNING: [Synth 8-3848] Net s_axi_offld_rlast in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13759]
+WARNING: [Synth 8-3848] Net eventlog_cur_cnt in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:13905]
+WARNING: [Synth 8-3848] Net S2_Read_Byte_Cnt_En in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14113]
+WARNING: [Synth 8-3848] Net S3_Read_Byte_Cnt_En in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14114]
+WARNING: [Synth 8-3848] Net S4_Read_Byte_Cnt_En in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14115]
+WARNING: [Synth 8-3848] Net S5_Read_Byte_Cnt_En in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14116]
+WARNING: [Synth 8-3848] Net S6_Read_Byte_Cnt_En in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14117]
+WARNING: [Synth 8-3848] Net S7_Read_Byte_Cnt_En in module/entity axi_perf_mon_v5_0_31_advanced does not have driver. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ipshared/af2e/hdl/axi_perf_mon_v5_0_syn_rfs.v:14118]
+WARNING: [Synth 8-7129] Port prmry_aclk in module axi_perf_mon_v5_0_31_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_rst_n in module axi_perf_mon_v5_0_31_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module axi_perf_mon_v5_0_31_cdc_sync__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[31] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[30] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[29] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[28] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[27] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[26] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[25] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[24] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[23] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[22] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[21] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[20] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[19] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[18] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[17] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[16] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[15] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[14] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[13] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[12] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[11] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[10] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[9] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[8] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[7] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[6] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[5] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[4] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[3] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[2] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[1] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_3[0] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[31] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[30] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[29] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[28] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[27] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[26] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[25] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[24] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[23] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[22] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[21] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[20] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[19] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[18] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[17] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[16] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[15] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[14] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[13] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[12] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[11] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[10] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[9] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[8] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[7] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[6] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[5] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[4] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[3] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[2] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[1] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_4[0] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[31] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[30] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[29] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[28] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[27] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[26] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[25] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[24] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[23] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[22] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[21] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[20] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[19] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[18] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[17] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[16] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[15] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[14] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[13] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[12] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[11] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[10] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[9] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[8] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[7] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[6] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[5] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[4] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[3] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[2] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[1] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_5[0] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Metric_Cnt_6[31] in module axi_perf_mon_v5_0_31_samp_metrics_data is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 2257.746 ; gain = 526.684 ; free physical = 170 ; free virtual = 503
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 2275.559 ; gain = 544.496 ; free physical = 143 ; free virtual = 440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 2275.559 ; gain = 544.496 ; free physical = 143 ; free virtual = 440
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2275.559 ; gain = 0.000 ; free physical = 128 ; free virtual = 227
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc] for cell 'inst'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc:66]
+Finished Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_axi_perf_mon_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_axi_perf_mon_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0_clocks.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_axi_perf_mon_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_axi_perf_mon_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_axi_perf_mon_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_axi_perf_mon_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lsh/tools/Xilinx/Vivado/2023.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_axi_perf_mon_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_axi_perf_mon_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 18 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2412.309 ; gain = 0.000 ; free physical = 730 ; free virtual = 1565
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2412.344 ; gain = 0.000 ; free physical = 718 ; free virtual = 1560
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 151 ; free virtual = 1148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 148 ; free virtual = 1147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property MAX_FANOUT = 300 for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.ext_calc_inst1 /rst_int_n_reg. (constraint file  /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc, line 58).
+Applied set_property MAX_FANOUT = 300 for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.metric_calc_inst1 /rst_int_n_reg. (constraint file  /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc, line 58).
+Applied set_property MAX_FANOUT = 300 for inst/\GEN_Advanced_Mode.adavnced_mode_inst /ext_calc_inst0/rst_int_n_reg. (constraint file  /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc, line 58).
+Applied set_property MAX_FANOUT = 300 for inst/\GEN_Advanced_Mode.adavnced_mode_inst /metric_calc_inst0/rst_int_n_reg. (constraint file  /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.gen/sources_1/bd/top/ip/top_axi_perf_mon_0_0/top_axi_perf_mon_0_0.xdc, line 58).
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_inst_1 /CDC_ENABLE_MCLK_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /CDC_ENABLE_MCLK_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_inst_0/CDC_ENABLE_MCLK_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/CDC_ENABLE_MCLK_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst /\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /\GEN_SLOT1.mon_fifo_ext_event1_inst /\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/\GEN_Advanced_Mode.adavnced_mode_inst /mon_fifo_ext_event0_inst/\USE_MON_FIFO.async_fifo_inst /\XPM_ASYNC.inst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 162 ; free virtual = 1133
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 153 ; free virtual = 1009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   36 Bit       Adders := 3     
+	   2 Input   33 Bit       Adders := 10    
+	   3 Input   32 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 4     
+	   4 Input    6 Bit       Adders := 6     
+	   2 Input    6 Bit       Adders := 98    
+	   3 Input    6 Bit       Adders := 4     
+	   4 Input    5 Bit       Adders := 6     
+	   3 Input    5 Bit       Adders := 2     
+	   4 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      6 Bit         XORs := 4     
+	   2 Input      5 Bit         XORs := 4     
+	   2 Input      1 Bit         XORs := 54    
++---Registers : 
+	               64 Bit    Registers := 4     
+	               36 Bit    Registers := 3     
+	               33 Bit    Registers := 24    
+	               32 Bit    Registers := 59    
+	               16 Bit    Registers := 10    
+	               13 Bit    Registers := 1     
+	                9 Bit    Registers := 4     
+	                8 Bit    Registers := 5     
+	                6 Bit    Registers := 86    
+	                5 Bit    Registers := 32    
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 22    
+	                1 Bit    Registers := 357   
++---RAMs : 
+	               8K Bit	(256 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   5 Input   36 Bit        Muxes := 3     
+	   2 Input   36 Bit        Muxes := 3     
+	   3 Input   33 Bit        Muxes := 10    
+	   2 Input   33 Bit        Muxes := 10    
+	   2 Input   32 Bit        Muxes := 46    
+	   3 Input   32 Bit        Muxes := 4     
+	   8 Input   32 Bit        Muxes := 1     
+	  41 Input   32 Bit        Muxes := 1     
+	  15 Input   32 Bit        Muxes := 3     
+	  25 Input   32 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 3     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 16    
+	  25 Input    4 Bit        Muxes := 3     
+	   5 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 4     
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 69    
+	   4 Input    2 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 138   
+	   6 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 4     
+	  25 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 133 ; free virtual = 367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-----------------------------------------------------------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                      | RTL Object                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst  | GEN_METRIC_RAM.Metric_ram_CDCR_reg | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++-----------------------------------------------------------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------------------------------------------------------------------+------------------------------------------+----------------+----------------------+---------------+
+|Module Name                                                             | RTL Object                               | Inference      | Size (Depth x Width) | Primitives    | 
++------------------------------------------------------------------------+------------------------------------------+----------------+----------------------+---------------+
+|xpm_memory_base:                                                        | gen_wr_a.gen_word_narrow.mem_reg         | User Attribute | 32 x 3               | RAM32M x 1    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | GEN_ARSIZE_FIFO.F1_ARSIZE_NARROW/mem_reg | User Attribute | 32 x 8               | RAM32M x 2    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F1_AWID_MATCH/mem_reg                    | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F2_FIRST_WRITE/mem_reg                   | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F3_WR_LAT_START/mem_reg                  | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F4_WR_LAT_END/mem_reg                    | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | rd_latency_fifo_inst/mem_reg             | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | FBC_WR_BEAT_CNT/mem_reg                  | User Attribute | 32 x 64              | RAM32M x 11   | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | BEAT_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | LAST_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | FSWI_WR_LAST_CNT/mem_reg                 | User Attribute | 32 x 32              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | IDLE_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | GEN_ARSIZE_FIFO.F1_ARSIZE_NARROW/mem_reg | User Attribute | 32 x 8               | RAM32M x 2    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F1_AWID_MATCH/mem_reg                    | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F2_FIRST_WRITE/mem_reg                   | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F3_WR_LAT_START/mem_reg                  | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F4_WR_LAT_END/mem_reg                    | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | rd_latency_fifo_inst/mem_reg             | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | FBC_WR_BEAT_CNT/mem_reg                  | User Attribute | 32 x 64              | RAM32M x 11   | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | BEAT_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | LAST_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | FSWI_WR_LAST_CNT/mem_reg                 | User Attribute | 32 x 32              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | IDLE_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|xpm_memory_base:                                                        | gen_wr_a.gen_word_narrow.mem_reg         | User Attribute | 32 x 3               | RAM32M x 1    | 
++------------------------------------------------------------------------+------------------------------------------+----------------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 2478 ; free virtual = 2897
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 3395 ; free virtual = 4142
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-----------------------------------------------------------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                      | RTL Object                         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-----------------------------------------------------------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst  | GEN_METRIC_RAM.Metric_ram_CDCR_reg | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++-----------------------------------------------------------------+------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------------------------------------------------------------------+------------------------------------------+----------------+----------------------+---------------+
+|Module Name                                                             | RTL Object                               | Inference      | Size (Depth x Width) | Primitives    | 
++------------------------------------------------------------------------+------------------------------------------+----------------+----------------------+---------------+
+|xpm_memory_base:                                                        | gen_wr_a.gen_word_narrow.mem_reg         | User Attribute | 32 x 3               | RAM32M x 1    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | GEN_ARSIZE_FIFO.F1_ARSIZE_NARROW/mem_reg | User Attribute | 32 x 8               | RAM32M x 2    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F1_AWID_MATCH/mem_reg                    | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F2_FIRST_WRITE/mem_reg                   | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F3_WR_LAT_START/mem_reg                  | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | F4_WR_LAT_END/mem_reg                    | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | rd_latency_fifo_inst/mem_reg             | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | FBC_WR_BEAT_CNT/mem_reg                  | User Attribute | 32 x 64              | RAM32M x 11   | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | BEAT_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | LAST_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | FSWI_WR_LAST_CNT/mem_reg                 | User Attribute | 32 x 32              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1  | IDLE_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | GEN_ARSIZE_FIFO.F1_ARSIZE_NARROW/mem_reg | User Attribute | 32 x 8               | RAM32M x 2    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F1_AWID_MATCH/mem_reg                    | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F2_FIRST_WRITE/mem_reg                   | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F3_WR_LAT_START/mem_reg                  | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | F4_WR_LAT_END/mem_reg                    | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | rd_latency_fifo_inst/mem_reg             | User Attribute | 32 x 33              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | FBC_WR_BEAT_CNT/mem_reg                  | User Attribute | 32 x 64              | RAM32M x 11   | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | BEAT_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | LAST_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | FSWI_WR_LAST_CNT/mem_reg                 | User Attribute | 32 x 32              | RAM32M x 6    | 
+|inst/\GEN_Advanced_Mode.adavnced_mode_inst/metric_calc_inst0            | IDLE_CNT_AWID_MATCH/mem_reg              | User Attribute | 32 x 1               | RAM32X1D x 1  | 
+|xpm_memory_base:                                                        | gen_wr_a.gen_word_narrow.mem_reg         | User Attribute | 32 x 3               | RAM32M x 1    | 
++------------------------------------------------------------------------+------------------------------------------+----------------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/GEN_METRIC_RAM.Metric_ram_CDCR_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/GEN_METRIC_RAM.Metric_ram_CDCR_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 2181 ; free virtual = 3531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/prmry_ack_int_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_level_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/p_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/scndry_out_int_d1_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/GEN_SLOT1.metric_calc_inst1/ext_trig_cdc_sync/s_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/prmry_ack_int_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/p_level_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_bus_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_bus_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_bus_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_bus_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_bus_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst1/s_level_out_bus_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/prmry_ack_int_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/p_level_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_bus_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_bus_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_bus_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_bus_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_bus_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/cdc_sync_inst2/s_level_out_bus_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/prmry_ack_int_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_level_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/p_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/scndry_out_int_d1_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/register_module_inst/eventlog_fifo_rden/s_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/prmry_ack_int_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d1_cdc_to_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d2_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d3_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d4_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d5_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d6_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_level_out_d7_inferred:in0 to constant 0
+INFO: [Synth 8-3295] tying undriven pin GEN_Advanced_Mode.adavnced_mode_inst/trigger_sig_cdc_sync/p_in_d1_cdc_from_inferred:in0 to constant 0
+INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:41 ; elapsed = 00:00:54 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 4491 ; free virtual = 6667
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:54 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 4701 ; free virtual = 6900
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 7282 ; free virtual = 9619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 7278 ; free virtual = 9615
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 7267 ; free virtual = 9605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 7267 ; free virtual = 9605
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   295|
+|2     |LUT1     |   296|
+|3     |LUT2     |   648|
+|4     |LUT3     |   210|
+|5     |LUT4     |   808|
+|6     |LUT5     |   702|
+|7     |LUT6     |  1522|
+|8     |RAM32M   |    72|
+|9     |RAM32X1D |    18|
+|10    |RAMB18E1 |     1|
+|11    |FDPE     |     4|
+|12    |FDRE     |  4173|
+|13    |FDSE     |   165|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:55 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 7266 ; free virtual = 9604
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2493 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:50 . Memory (MB): peak = 2412.344 ; gain = 544.496 ; free physical = 7261 ; free virtual = 9601
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:55 . Memory (MB): peak = 2412.344 ; gain = 681.281 ; free physical = 7260 ; free virtual = 9601
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2412.344 ; gain = 0.000 ; free physical = 7317 ; free virtual = 9792
+INFO: [Netlist 29-17] Analyzing 386 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2412.344 ; gain = 0.000 ; free physical = 7218 ; free virtual = 9700
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 90 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 72 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 18 instances
+
+Synth Design complete | Checksum: 787de4a5
+INFO: [Common 17-83] Releasing license: Synthesis
+280 Infos, 168 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 2412.344 ; gain = 1032.812 ; free physical = 7181 ; free virtual = 9670
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1495.177; main = 1259.602; forked = 235.575
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3390.281; main = 2412.309; forked = 1009.988
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2436.320 ; gain = 0.000 ; free physical = 7150 ; free virtual = 9641
+INFO: [Common 17-1381] The checkpoint '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/top_axi_perf_mon_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP top_axi_perf_mon_0_0, cache-ID = a20cad9b7f8e639a
+INFO: [Coretcl 2-1174] Renamed 114 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2436.320 ; gain = 0.000 ; free physical = 6948 ; free virtual = 9460
+INFO: [Common 17-1381] The checkpoint '/home/lsh/2025/vivado_zynq_proj_scw60p79/finn_zynq_link.runs/top_axi_perf_mon_0_0_synth_1/top_axi_perf_mon_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_axi_perf_mon_0_0_utilization_synth.rpt -pb top_axi_perf_mon_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 20 20:19:47 2025...
