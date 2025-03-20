@@ -5,6 +5,8 @@
 
 ----
 # 2. 기본 연결 
+![Image](https://github.com/user-attachments/assets/2ae1f43b-924f-43e4-8791-01123c9bbd7c)
+
 
 
 
